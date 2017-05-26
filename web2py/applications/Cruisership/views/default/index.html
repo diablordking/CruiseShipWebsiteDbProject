@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" xmlns={{=URL('static','www.w3.org/1999/xhtml/index.html')}}>
 <!--<![endif]-->
+{{
+
+
+cnx = pymysql.connect(host='localhost',user='root',password='hades2525',db='mydb',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+
+cursor = cnx.cursor()
+
+query = ("select * from passenger WHERE 'passenger_gender'='%s' " )
+
+query1 = ("SELECT * FROM passenger WHERE passenger_gender = '%s' and passenger_class = '%s' and ports_id = '%s' or passenger_firstname = '%s'" % (request.vars.Gender,request.vars.Class,request.vars.Port,request.vars.fname))
+
+cursor.execute(query1)
+
+
+a = cursor.fetchall()
+
+
+
+
+}}
+
+
+
+
 
 <!-- Mirrored from cruiseweb.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 May 2017 12:21:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
@@ -14,20 +40,7 @@
 	  <!-- Eloqua Tracking Script12 for personalquote,modal-emaildeal,modal-checkavailibilty.aspx-->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
     <!--End Eloqua Tracking Script -->
-        <script type="text/javascript">
-			function PushFavoritesToEloque(result) {
-            if (result.elqFormName) $("[name=elqFormName]").val(result.elqFormName);
-            if (result.elqSiteID) $("[name=elqSiteID]").val(result.elqSiteID);
-            if (result.favoriteID) $("[name=favoriteID]").val(result.favoriteID);
-            if (result.pageName) $("[name=pageName]").val(result.pageName);
-            if (result.pagePath) $("[name=pagePath]").val(result.pagePath);
-            if (result.addedDate) $("[name=addedDate]").val(result.addedDate);
-            if (result.removedFlag) $("[name=removedFlag]").val(result.removedFlag);
-            if (result.emailAddress) $("[name=EmailAddress]").val(result.emailAddress);
-            var formtag = $('form[name="cruiseFavoritesBackend"]').serialize();
-            $('form#cruiseFavoritesBackend').submit();
-        }
-        </script>
+
 		<script>document.domain = 'cruiseweb.com';</script>
 		 <script type="text/javascript">
          var _elqQ = _elqQ || [];
@@ -45,15 +58,10 @@
              else if (window.attachEvent) window.attachEvent('onload', async_load);
          })(); </script> 
 <script type="text/javascript" src="http://cruiseweb.com/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/bootstrap.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery-pretty-checkable.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider-min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery.animate-enhanced.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery.cookie.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/titlecase.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery.blockUI.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/main.js"></script><meta name="description" content="Looking for a cruise deal on the cruise vacation? Browse the best cruise deals or speak with our cruise travel agents today for even better options." /><meta name="keywords" content="Test" /><title>
-	Best Cruise Deals, Best Cruise Travel Agents | The Cruise Web
+	Best Titatic Deals, Best Titatic Travel Agents | The Titatic Web
 </title></head>
 <body>
-    <input name="ctl00$hdCount" type="hidden" id="hdCount" value="4000" /><iframe width="0" height="0" border="0" name="dummyframe" style="display: none;" id="dummyframe"></iframe>
-    <form id="cruiseFavoritesBackend" style="display:block" class="favoriteForm" target="dummyframe" method="post" name="cruiseFavoritesBackend" action="https://s179671029.t.eloqua.com/e/f2">
-        <input type="hidden" name="elqFormName" value="cruiseFavoritesBackend" /><input type="hidden" name="elqSiteID" value="179671029" /><input type="hidden" id="favoriteID" name="favoriteID" value="" /><input type="hidden" id="pageName" name="pageName" value="" />
-        <input type="hidden" id="pagePath" name="pagePath" value="" /><input type="hidden" id="addedDate" name="addedDate" value="" /><input type="hidden" id="removedFlag" name="removedFlag" value="" /><input id="EmailAddress" name="EmailAddress" type="hidden" value="" />
-        <button type="button" id="submitbtn" name="submitbtn" style="display:none" ></button></form>
-    <form name="form1" method="post" action="http://cruiseweb.com/" id="form1">
+    
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
@@ -61,27 +69,11 @@
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
 </div>
 
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
 
 
-<script src="http://cruiseweb.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZG6o3HKSzPwJE7vcGQ-heYBHa_E3cQtmL8hT8HMTtem3v1d7xwd8z90bgkuslJn6nQ2&amp;t=636065041469690049" type="text/javascript"></script>
 
 
-<script src="http://cruiseweb.com/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQmwxSzRtvL3dvh-SVFYOeKqLNfRiv44gQRcD2FXsWCC0gt2ICRPUnyKf9K9-7rxSQl6yUAG7_Ib6Bb-4pDVcEydcO4lWrb20jDZ0oHsCtDCuV5hNDiB8FnHrpzojMCCFou0nNWOGGKG3Ur83BBCEB3I1&amp;t=4794f07b" type="text/javascript"></script>
+
 <script type="text/javascript">
 //<![CDATA[
 if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
@@ -112,21 +104,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                     <!-- Logo -->
                     <div class="logo" align="center">
                         <!--Default.aspx is removed by samy from this url for not showing it in the url-->
-                        <a href='http://cruiseweb.com/'> <img src='http://cruiseweb.com/img/logo.png' title="Cruise Web" /></a>
+                        <a href='http://127.0.0.1:8000/Titaticrship/default/index'> <img src='http://cruiseweb.com/img/logo.png' title="Titatic Web" /></a>
                     </div>
                     <!-- Toolbar links -->
                     <div class="links">
-                        <ul><li class="link hidden-phone"><a href='http://cruiseweb.com/already-booked/'><i class="icon-tags"></i>
+                        <ul><li class="link hidden-phone"><a href='http://127.0.0.1:8000/Titaticrship/default/'><i class="icon-tags"></i>
                                 <br class="visible-phone" />
                                 <span class="hidden-tablet">Already</span>
                                 <br class="visible-phone" />
-                                Booked?</a></li>
+                                Dead?</a></li>
                             <li class="divider-vertical hidden-phone"></li>
                             <li id="lnkLogin" style="display:;" class="link hidden-phone"><a data-toggle="modal" onclick="javascript:showUsernamemodal(2);" href="#"><i class="icon-heart"></i>
                                 <br class="visible-phone" />
                                 Login <span class="hidden-tablet">to
                                     <br class="visible-phone" />
-                                    My Cruise Web</span></a></li>
+                                    My Titatic Web</span></a></li>
                             <li id="lnkMyFav" style="display:none;" class="link hidden-phone"><a href='http://cruiseweb.com/favorites/'><i class="icon-heart"></i>
                                 <br class="visible-phone" />
                                 <span class="hidden-tablet">
@@ -157,10 +149,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                             </li>
                             <li class="button">
                                 <a href="#" data-target='/personalquote-modal.htm' data-toggle="modal" class="btn btn-orange modal-iframe"><strong>Personal Quote</strong></a></li>
-                            <!--<li class="search"><a class="btn large-icon" href="search/"><img src='/img/icon-magnify.png' title="Search" /></a></li>-->
-                            <li class="sitesearch"><iframe style="border: none; padding: 0; margin: 0;" name="frmSearch" src='http://cruiseweb.com/internalsearch.aspx' id="frmTop" marginheight="0" marginwidth="0" frameborder="0" width="200" height="32"></iframe>
+                             <li class="sitesearch"> 
+                                 
+                                 <li class="button">
+                                 <input type="text" name="fname" placeholder="Search.." form="search"> 
+                            </li>
+                                <form action="{{=URL('search')}}" id="search">
+  <input type="submit">
+</form>
                             </li></ul></div> </div>  </header>
-            <!-- Cruise search modal placeholder -->
+            <!-- Titatic search modal placeholder -->
             <div id="ajax-cruisesearchmodal" class="modal hide fade" tabindex="-1" data-focus-on="input:first"></div>
             <!-- Main navigation -->
             <div class="navigation">
@@ -185,31 +183,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                         </a>
                         <div class="nav-collapse collapse navbar-responsive-collapse">
                             <ul class="nav">
-                                <!-- Find a Cruise -->
+                                <!-- Find a Titatic -->
                                 <!-- Override the click action which closes this panel -->
-                                <li class="dropdown"><a id="navFindCruise" role="button" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" data-delay="500"  href="javascript:void(0);">Find a Cruise</a>
-                                    <div class="dropdown-menu menu menu-search" role="menu" aria-labelledby="Find a Cruise">
+ 
+                                    <div class="dropdown-menu menu menu-search" role="menu" aria-labelledby="Find a Titatic">
                                         <!-- Triggers for AJAX modal panels -->
                                         <div class="input-prepend input-append">
-                                            <button id="menu-cruisetype" role="button" class="btn nav-form" data-target='/modal-cruisetype.aspx' data-toggle="modal">Cruise Type</button>
-                                            <input id="mainCruiseType" type="text" placeholder="Cruise Type" value="Cruise Type" readonly style="display: none" />
-                                            <button id="menu-cruisetypedrop" role="button" class="btn large-icon" data-target='/modal-cruisetype.aspx' data-toggle="modal">
-                                                <img src='http://cruiseweb.com/img/icon-droparrow.png' title="Search" /></button>
+                                            <button id="menu-cruisetype" role="button" class="btn nav-form" data-target='#' data-toggle="modal">Titatic Type</button>
+                                            <input id="mainTitaticType" type="text" placeholder="Titatic Type" value="Titatic Type" readonly style="display: none" />
+                                            <button id="menu-cruisetypedrop" role="button" class="btn large-icon" data-target='#' data-toggle="modal">
                                         </div>
                                         <br class="visible-phone" />
                                         <div class="input-prepend input-append">
-                                            <button id="menu-cruisedest" role="button" class="btn nav-form" data-target='/modal-cruisedest.aspx' data-toggle="modal">Cruise Destination</button>
-                                            <input id="mainCruiseDestination" type="text" placeholder="Cruise Destination" value="Cruise Destination" readonly style="display: none" />
+                                            <button id="menu-cruisedest" role="button" class="btn nav-form" data-target='/modal-cruisedest.aspx' data-toggle="modal">Titatic Destination</button>
+                                            <input id="mainTitaticDestination" type="text" placeholder="Titatic Destination" value="Titatic Destination" readonly style="display: none" />
                                             <button id="menu-cruisedestdrop" role="button" class="btn large-icon" data-target='/modal-cruisedest.aspx' data-toggle="modal">
-                                                <img src='http://cruiseweb.com/img/icon-droparrow.png' title="Search" /></button>
-                                        </div>
+                                         </div>
                                         <br class="visible-phone" />
                                         <div class="input-prepend input-append">
-                                            <button id="menu-cruisedate" role="button" class="btn nav-form" data-target='/modal-cruisedate.aspx' data-toggle="modal">Cruise Date</button>
-                                            <input id="mainCruiseDate" type="text" placeholder="Departure Date" value="Departure Date" readonly style="display: none" />
+                                            <button id="menu-cruisedate" role="button" class="btn nav-form" data-target='/modal-cruisedate.aspx' data-toggle="modal">Titatic Date</button>
+                                            <input id="mainTitaticDate" type="text" placeholder="Departure Date" value="Departure Date" readonly style="display: none" />
                                             <button id="menu-cruisedatedrop" role="button" class="btn large-icon" data-target='/modal-cruisedate.aspx' data-toggle="modal">
-                                                <img src='http://cruiseweb.com/img/icon-droparrow.png' title="Search" /></button>
-                                        </div>
+                                         </div>
                                         
                                         <button class="btn btn-blue btn-block" onclick="return GetSessionValues(1);" type="button">Search</button>
                                         <!--Index.aspx is removed by samy from this url for not showing it in the url-->
@@ -219,9 +214,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                                 <!-- Deals -->
                                 <!-- Adding class="disabled" to make the href work on click -->
                                 <li class="dropdown"><a id="navDeals" role="button" class="dropdown-toggle disabled navigationURL" data-toggle="dropdown" data-hover="dropdown" href='http://cruiseweb.com/deals/'>Deals</a>
-                                    <div class="dropdown-menu menu menu-deals" role="menu" aria-labelledby="Cruise Deals">
-                                        <ul id="dealFirst"><li ><a href=http://cruiseweb.com/deals/featured-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage1.jpg' title='Deal' /><p><strong> Featured Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage2.jpg' title='Deal' /><p><strong> Deals by Destination  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage3.jpg' title='Deal' /><p><strong> Deals by Cruise Line  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals-departing><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage4.jpg' title='Deal' /><p><strong> Deals by Departure Port  </strong></p></a></li></ul>
-                                        <ul id="dealSecond"><li ><a href=http://cruiseweb.com/deals/last-minute-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage5.jpg' title='Deal' /><p><strong> Last Minute Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/holiday-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage6.jpg' title='Deal' /><p><strong> Holiday Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/military-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage7.jpg' title='Deal' /><p><strong> Military Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/family-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage8.jpg' title='Deal' /><p><strong> Family Cruise Deals  </strong></p></a></li></ul>
+                                    <div class="dropdown-menu menu menu-deals" role="menu" aria-labelledby="Titatic Deals">
+                                        <ul id="dealFirst"><li ><a href=http://cruiseweb.com/deals/featured-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage1.jpg' title='Deal' /><p><strong> Featured Titatic Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage2.jpg' title='Deal' /><p><strong> Deals by Destination  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage3.jpg' title='Deal' /><p><strong> Deals by Titatic Line  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals-departing><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage4.jpg' title='Deal' /><p><strong> Deals by Departure Port  </strong></p></a></li></ul>
+                                        <ul id="dealSecond"><li ><a href=http://cruiseweb.com/deals/last-minute-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage5.jpg' title='Deal' /><p><strong> Last Minute Titatic Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/holiday-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage6.jpg' title='Deal' /><p><strong> Holiday Titatic Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/military-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage7.jpg' title='Deal' /><p><strong> Military Titatic Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/family-cruise-deals><img src='http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage8.jpg' title='Deal' /><p><strong> Family Titatic Deals  </strong></p></a></li></ul>
                                     </div>
                                 </li>
                                 <li class="divider-vertical visible-desktop"></li>
@@ -233,27 +228,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                                     </div>
                                 </li>
                                 <li class="divider-vertical visible-desktop"></li>
-                                <!-- Cruise Lines -->
+                                <!-- Titatic Lines -->
                                 <!-- Adding class="disabled" to make the href work on click -->
-                                <li class="dropdown"><a id="navCruiseLines" role="button" class="dropdown-toggle disabled navigationURL " data-toggle="dropdown" data-hover="dropdown" href='http://cruiseweb.com/cruise-lines/'>Cruise Lines</a>
-                                <div class="dropdown-menu menu menu-cruiselines" role="menu" aria-labelledby="Cruise Lines">
+                                <li class="dropdown"><a id="navTitaticLines" role="button" class="dropdown-toggle disabled navigationURL " data-toggle="dropdown" data-hover="dropdown" href='http://cruiseweb.com/cruise-lines/'>Titatic Lines</a>
+                                <div class="dropdown-menu menu menu-cruiselines" role="menu" aria-labelledby="Titatic Lines">
                                 <ul><li><a href='http://cruiseweb.com/popular-cruise-lines/'> <img src='http://cruiseweb.com/img/nav/popular-cruise-lines-menu-image.jpg' title="Popular Lines" /><p><strong>Popular Lines</strong></p></a></li>
                                 <li><a href='http://cruiseweb.com/luxury-cruise-lines/'><img src='http://cruiseweb.com/img/nav/luxury-cruise-lines-menu-image.jpg' title="Luxury Lines" /><p><strong>Luxury Lines</strong></p></a></li>
                                 <li><a href='http://cruiseweb.com/river-cruise-lines/'><img src='http://cruiseweb.com/img/nav/river-cruise-lines-menu-image.jpg' title="River Lines" /><p><strong>River Lines</strong></p></a></li>
                                 <li><a href='http://cruiseweb.com/cruise-lines/'><img src='http://cruiseweb.com/img/nav/all-cruise-lines-menu-image.jpg' title="All Lines" /><p><strong>All Lines</strong></p></a></li>
-                                </ul><ul><li id="liPopular" class="extra"><a href=http://cruiseweb.com/cruise-lines/avalon-waterways><p>Avalon Waterways</p></a><a href=http://cruiseweb.com/cruise-lines/azamara-club-cruises><p>Azamara Club Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/carnival-cruise-line><p>Carnival Cruise Line</p></a><a href=http://cruiseweb.com/cruise-lines/celebrity-cruises><p>Celebrity Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/crystal-cruises><p>Crystal Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/cunard><p>Cunard</p></a><a href=http://cruiseweb.com/cruise-lines/fathom><p>Fathom</p></a></li> <li id="liLuxury" class="extra"><a href=http://cruiseweb.com/cruise-lines/holland-america-line><p>Holland America Line</p></a><a href=http://cruiseweb.com/cruise-lines/msc-cruises><p>Msc Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/norwegian-cruise-line><p>Norwegian Cruise Line</p></a><a href=http://cruiseweb.com/cruise-lines/oceania-cruises><p>Oceania Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/paul-gauguin-cruises><p>Paul Gauguin Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/princess-cruises><p>Princess Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/regent-seven-seas-cruises><p>Regent Seven Seas Cruises</p></a></li> <li id="liRiver" class="extra"><a href=http://cruiseweb.com/cruise-lines/royal-caribbean-international><p>Royal Caribbean International</p></a><a href=http://cruiseweb.com/cruise-lines/seabourn-cruise-line><p>Seabourn Cruise Line</p></a><a href=http://cruiseweb.com/cruise-lines/silversea-cruises><p>Silversea Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/uniworld-river-cruises><p>Uniworld River Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/viking-oceans><p>Viking Oceans</p></a><a href=http://cruiseweb.com/cruise-lines/viking-river-cruises><p>Viking River Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/windstar-cruises><p>Windstar Cruises</p></a></li> </ul></div></li><li class="divider-vertical visible-desktop"></li>
+                                </ul><ul><li id="liPopular" class="extra"><a href=http://cruiseweb.com/cruise-lines/avalon-waterways><p>Avalon Waterways</p></a><a href=http://cruiseweb.com/cruise-lines/azamara-club-cruises><p>Azamara Club Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/carnival-cruise-line><p>Carnival Titatic Line</p></a><a href=http://cruiseweb.com/cruise-lines/celebrity-cruises><p>Celebrity Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/crystal-cruises><p>Crystal Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/cunard><p>Cunard</p></a><a href=http://cruiseweb.com/cruise-lines/fathom><p>Fathom</p></a></li> <li id="liLuxury" class="extra"><a href=http://cruiseweb.com/cruise-lines/holland-america-line><p>Holland America Line</p></a><a href=http://cruiseweb.com/cruise-lines/msc-cruises><p>Msc Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/norwegian-cruise-line><p>Norwegian Titatic Line</p></a><a href=http://cruiseweb.com/cruise-lines/oceania-cruises><p>Oceania Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/paul-gauguin-cruises><p>Paul Gauguin Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/princess-cruises><p>Princess Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/regent-seven-seas-cruises><p>Regent Seven Seas Titatics</p></a></li> <li id="liRiver" class="extra"><a href=http://cruiseweb.com/cruise-lines/royal-caribbean-international><p>Royal Caribbean International</p></a><a href=http://cruiseweb.com/cruise-lines/seabourn-cruise-line><p>Seabourn Titatic Line</p></a><a href=http://cruiseweb.com/cruise-lines/silversea-cruises><p>Silversea Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/uniworld-river-cruises><p>Uniworld River Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/viking-oceans><p>Viking Oceans</p></a><a href=http://cruiseweb.com/cruise-lines/viking-river-cruises><p>Viking River Titatics</p></a><a href=http://cruiseweb.com/cruise-lines/windstar-cruises><p>Windstar Titatics</p></a></li> </ul></div></li><li class="divider-vertical visible-desktop"></li>
                                 <!-- All About Cruising -->
                                 <!-- Adding class="disabled" to make the href work on click -->
                                 <li class="dropdown pull-right"><a id="navAbout" role="button" class="dropdown-toggle disabled navigationURL " data-toggle="dropdown" data-hover="dropdown" href='http://cruiseweb.com/all-about-cruising/'>All About Cruising</a>
                                 <div class="dropdown-menu menu menu-about" role="menu" aria-labelledby="All About Cruising"><ul><li><a href='http://cruiseweb.com/cruising-101/'><img src='http://cruiseweb.com/img/nav/cruising-101-menu-image.jpg' title="Cruising 101" /><p>
                                 <strong>Cruising 101</strong></p> </a><a href="#" data-target='/personalquote-modal.htm' data-toggle="modal" class="modal-iframe"><p>Free Consultation</p> </a><a href='http://cruiseweb.com/why-cruise/'>
-                                <p> Why Cruise? </p></a><a href='http://cruiseweb.com/cruise-faq/'><p>Cruise FAQ</p></a><a href='http://cruiseweb.com/shore-excursions/'><p>Shore Excursions </p>
+                                <p> Why Titatic? </p></a><a href='http://cruiseweb.com/cruise-faq/'><p>Titatic FAQ</p></a><a href='http://cruiseweb.com/shore-excursions/'><p>Shore Excursions </p>
                                 </a><a href='http://cruiseweb.com/cruising-tips/'><p>Cruising Tips</p></a><a href='http://cruiseweb.com/photo-galleries/'><p>Photo Galleries</p>
-                                </a></li><li><a href='http://cruiseweb.com/specialty-cruises/'><img src='http://cruiseweb.com/img/nav/specialty-cruises-menu-image.jpg' title="Specialty Cruises" /><p><strong>Specialty Cruises</strong>
-                                </p></a><a href='http://cruiseweb.com/group-cruises/'><p>Group Cruises</p></a><a href='http://cruiseweb.com/business-incentive-cruises/'><p>Business / Incentive Cruises</p></a><a href='http://cruiseweb.com/events-meetings-atsea/'>
+                                </a></li><li><a href='http://cruiseweb.com/specialty-cruises/'><img src='http://cruiseweb.com/img/nav/specialty-cruises-menu-image.jpg' title="Specialty Titatics" /><p><strong>Specialty Titatics</strong>
+                                </p></a><a href='http://cruiseweb.com/group-cruises/'><p>Group Titatics</p></a><a href='http://cruiseweb.com/business-incentive-cruises/'><p>Business / Incentive Titatics</p></a><a href='http://cruiseweb.com/events-meetings-atsea/'>
                                 <p>Events &amp; Meetings at Sea </p></a><a href='http://cruiseweb.com/private-charters/'><p>Private Charters</p></a><a href='http://cruiseweb.com/theme-cruises/'>
-                                <p>Theme Cruises </p></a><a href='http://cruiseweb.com/river-cruises/'><p>River Cruises </p></a><a href='http://cruiseweb.com/cruise-tours/'><p>Cruise Tours</p> </a><a href='http://cruiseweb.com/wedding-cruises/'>
-                                <p>Wedding Cruises</p></a><a href='http://cruiseweb.com/hosted-cruises/'><p>Hosted Cruises</p></a><a href='http://cruiseweb.com/family-cruises/'><p>Family Cruises</p>
+                                <p>Theme Titatics </p></a><a href='http://cruiseweb.com/river-cruises/'><p>River Titatics </p></a><a href='http://cruiseweb.com/cruise-tours/'><p>Titatic Tours</p> </a><a href='http://cruiseweb.com/wedding-cruises/'>
+                                <p>Wedding Titatics</p></a><a href='http://cruiseweb.com/hosted-cruises/'><p>Hosted Titatics</p></a><a href='http://cruiseweb.com/family-cruises/'><p>Family Titatics</p>
                                 </a></li><li><a href='http://cruiseweb.com/news-media/'><img src='http://cruiseweb.com/img/nav/news-and-media-menu-image.jpg' title="News Media" /><p>
                                 <strong>News &amp; Media</strong></p></a><a href='http://cruiseweb.com/press-news/'><p>Press &amp; News</p></a><a href='http://cruiseweb.com/photo-galleries/'>
                                 <p>Photo Galleries </p></a><a href='http://cruiseweb.com/testimonials/'><p>Testimonials</p></a><a target="_blank" href="http://cruiseweb.com/blog/"><p> Blog</p></a><a href='http://cruiseweb.com/newsletter/'>
@@ -266,7 +261,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                                         <ul>
                                             <li><a href='http://cruiseweb.com/already-booked/'>
                                                 <img src='http://cruiseweb.com/img/nav/already-booked-menu-image.jpg' title="Already Booked" /><p>
-                                                    <strong>Already Booked?</strong>
+                                                    <strong>Already Dead?</strong>
                                                 </p>
                                             </a><a href='http://cruiseweb.com/already-booked/'>
                                                 <p>
@@ -281,8 +276,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                                             </a><a href='http://cruiseweb.com/travel-protection/'> <p>Travel Protection </p>
                                             </a><a href='http://cruiseweb.com/shore-excursions/'><p>Shore Excursions </p> </a></li>
                                             <li><a href='http://cruiseweb.com/why-cruise-web/'>
-                                                <img src='http://cruiseweb.com/img/nav/why-cruise-web-menu-image.jpg' title="Why Cruise Web" /><p>
-                                                    <strong>Why Cruise Web?</strong>
+                                                <img src='http://cruiseweb.com/img/nav/why-cruise-web-menu-image.jpg' title="Why Titatic Web" /><p>
+                                                    <strong>Why Titatic Web?</strong>
                                                 </p>
                                             </a><a href='http://cruiseweb.com/our-approach/'>
                                                 <p>Our Approach</p>
@@ -341,50 +336,58 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
 <div id="sharebar"> <div class="sharebar-position">   <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-5265f51c2796a2a2"> <img src='http://cruiseweb.com/img/lg-share-en.gif'  width="125" height="16" alt="Bookmark and Share" style="border: 0" /></a> <div class="favorite" onclick="javascript:fireFavEvent();"><a href="#" class="active" alt="" title="Favorite"><span class="mark-fave">Mark as favorite</span><span class="unmark-fave">Unmark favorite</span></a></div> </div></div>
 <input type="hidden" name="ctl00$cphlUser$RotatingBanner$hfIsFavourite" id="cphlUser_RotatingBanner_hfIsFavourite" value="False" /><div id="cphlUser_RotatingBanner_divRotatingBanner"><input type="hidden" name="ctl00$cphlUser$RotatingBanner$hdnBanner" id="cphlUser_RotatingBanner_hdnBanner" value="Home" />
     <!-- Large galery -->
- <section class="gallery"><div class="flexslider-main"><ul id="cphlUser_RotatingBanner_galImages" class="slides"><li><a href='http://cruiseweb.com/cunard-line-specials/' title='Cunard 3 for All: 30% Off, Free OBC and Free Tips' target='_blank'><img src='http://cruiseweb.com/admin/Images/image-gallery/cun-3forall-banner.jpg' alt='Cunard 3 for All: 30% Off, Free OBC and Free Tips' draggable='false'><div class='poster' style='background-image: url(http://cruiseweb.com/admin/Images/image-gallery/cun-3forall-banner.jpg);'></div></a></li><li><a href='http://cruiseweb.com/celebrity-cruises-specials/' title='Celebrity Cruises with up to 4 FREE Perks*' target='_blank'><img src='http://cruiseweb.com/admin/Images/image-gallery/cel-sea-of-savings-banner.jpg' alt='Celebrity Cruises with up to 4 FREE Perks*' draggable='false'><div class='poster' style='background-image: url(http://cruiseweb.com/admin/Images/image-gallery/cel-sea-of-savings-banner.jpg);'></div></a></li><li><a href='http://cruiseweb.com/msc-cruises-specials/' title='MSC Cruises Seaside Sale plus Kids Sail FREE*' target='_blank'><img src='http://cruiseweb.com/admin/Images/image-gallery/msc-cruises-seaside-sale-banner.jpg' alt='MSC Cruises Seaside Sale plus Kids Sail FREE*' draggable='false'><div class='poster' style='background-image: url(http://cruiseweb.com/admin/Images/image-gallery/msc-cruises-seaside-sale-banner.jpg);'></div></a></li></ul><div class="flex-main-nav"></div></div></section></div>
-<script type="text/javascript">
-   function PushFavoritesToEloque(result) {
-        if (result.elqFormName) $("[name=elqFormName]").val(result.elqFormName);
-        if (result.elqSiteID) $("[name=elqSiteID]").val(result.elqSiteID);
-        if (result.favoriteID) $("[name=favoriteID]").val(result.favoriteID);
-        if (result.pageName) $("[name=pageName]").val(result.pageName);
-        if (result.pagePath) $("[name=pagePath]").val(result.pagePath);
-        if (result.addedDate) $("[name=addedDate]").val(result.addedDate);
-        if (result.removedFlag) $("[name=removedFlag]").val(result.removedFlag);
-        if (result.emailAddress) $("[name=EmailAddress]").val(result.emailAddress);
-        var formtag = $('form[name="cruiseFavoritesBackend"]').serialize();
-        $('form#cruiseFavoritesBackend').submit();
-    }
-</script>
+ <section class="gallery"><div class="flexslider-main"><ul id="cphlUser_RotatingBanner_galImages" class="slides"><li><a href='http://cruiseweb.com/cunard-line-specials/' title='Cunard 3 for All: 30% Off, Free OBC and Free Tips' target='_blank'><img src='http://cruiseweb.com/admin/Images/image-gallery/cun-3forall-banner.jpg' alt='Cunard 3 for All: 30% Off, Free OBC and Free Tips' draggable='false'><div class='poster' style='background-image: url(http://cruiseweb.com/admin/Images/image-gallery/cun-3forall-banner.jpg);'></div></a></li><li><a href='http://cruiseweb.com/celebrity-cruises-specials/' title='Celebrity Titatics with up to 4 FREE Perks*' target='_blank'><img src='http://cruiseweb.com/admin/Images/image-gallery/cel-sea-of-savings-banner.jpg' alt='Celebrity Titatics with up to 4 FREE Perks*' draggable='false'><div class='poster' style='background-image: url(http://cruiseweb.com/admin/Images/image-gallery/cel-sea-of-savings-banner.jpg);'></div></a></li><li><a href='http://cruiseweb.com/msc-cruises-specials/' title='MSC Titatics Seaside Sale plus Kids Sail FREE*' target='_blank'><img src='http://cruiseweb.com/admin/Images/image-gallery/msc-cruises-seaside-sale-banner.jpg' alt='MSC Titatics Seaside Sale plus Kids Sail FREE*' draggable='false'><div class='poster' style='background-image: url(http://cruiseweb.com/admin/Images/image-gallery/msc-cruises-seaside-sale-banner.jpg);'></div></a></li></ul><div class="flex-main-nav"></div></div></section></div>
 
-    <div class="main-body"><div class="container main-tagline"> <h1 class="tagline-title"> <a href="#" data-target='/personalquote-modal.htm'  data-toggle="modal" class="modal-iframe">Expert guidance for your cruise vacation!</a></h1></div>
+
+    <div class="main-body"><div class="container main-tagline"> <h1 class="tagline-title"> <a href="#" data-target='/personalquote-modal.htm'  data-toggle="modal" class="modal-iframe">Expert guidance for Titanic Victim!</a></h1></div>
         <!-- Content -->
-        <section class="container main-content bottom-bar"><div id="cphlUser_topthreedeals"> <div class='span3 deal'><a target='_blank' href=http://cruiseweb.com/deals/cruise-deals><img class='lazy' src='http://cruiseweb.com/admin/images/deal/imageb/dealbimage174.jpg'  alt='Cruise Deals by Destination!' title='View Deal'> <div class='deal-description'><p>Cruise Deals by Destination!</p></div> </a> </div> <div class='span3 deal'><a target='_blank' href=http://cruiseweb.com/deals/cruise-deals><img class='lazy' src='http://cruiseweb.com/admin/images/deal/imageb/dealbimage175.jpg'  alt='Cruise Deals by Cruise Line!' title='View Deal'> <div class='deal-description'><p>Cruise Deals by Cruise Line!</p></div> </a> </div> <div class='span3 deal'><a target='_blank' href=http://cruiseweb.com/deals/cruise-deals-departing><img class='lazy' src='http://cruiseweb.com/admin/images/deal/imageb/dealbimage176.jpg'  alt='Cruise Deals by Departure Port!' title='View Deal'> <div class='deal-description'><p>Cruise Deals by Departure Port!</p></div> </a> </div></div>
+        <section class="container main-content bottom-bar"><div id="cphlUser_topthreedeals"> <div class='span3 deal'><a target='_blank' href=http://cruiseweb.com/deals/cruise-deals><img class='lazy' src={{=URL('static','images/titanic2.jpg')}}  alt='Titatic Deals by Destination!' title='View Deal'> <div class='deal-description'><p>Titatic Deals by Destination!</p></div> </a> </div> <div class='span3 deal'><a target='_blank' href=http://cruiseweb.com/deals/cruise-deals><img class='lazy' src={{=URL('static','images/titatic3.jpeg')}}  alt='Titatic Deals by Titatic Line!' title='View Deal'> <div class='deal-description'><p>Titatic Deals by Titatic Line!</p></div> </a> </div> <div class='span3 deal'><a target='_blank' href=http://cruiseweb.com/deals/cruise-deals-departing><img class='lazy' src="{{=URL('static','images/titanic.jpg')}}"  alt='Titatic Deals by Departure Port!' title='View Deal'> <div class='deal-description'><p>Titatic Deals by Departure Port!</p></div> </a> </div></div>
             <!-- 4th column side feature search box -->
             <div class="span3 cruise-search"><div id="cruise-search-block"><div class="cruise-search-form">
-                        <img src="http://cruiseweb.com/img/logo-boat.png" class="boat" alt="Cruise Web">
-                        <div class="boat-title"><em>Find a</em><span class="hidden-phone"><br />
-                            &nbsp;</span><strong> Cruise</strong></div>
+                        <img src="http://cruiseweb.com/img/logo-boat.png" class="boat" alt="Titatic Web">
+                        <div class="boat-title"><em>Find Your </em><span class="hidden-phone"><br />
+                            &nbsp;</span><strong> Dead</strong></div>
                         <div class="clearfix"></div>
                         <div class="input-prepend input-append">
-                            <button id="side-cruisetype" role="button" class="btn nav-form" data-target='/modal-cruisetype.aspx' data-toggle="modal">Cruise Type</button>
-                            <input id="sideCruiseType" type="text" placeholder="Cruise Type" value="Cruise Type" readonly style="display: none" />
-                            <button id="side-cruisetypedrop" role="button" class="btn large-icon" data-target='/modal-cruisetype.aspx' data-toggle="modal">
+                             <select name="Gender" style="width: 100%;" class="ng-pristine ng-valid ng-touched" form="carform">
+                                 <option value="" selected="selected">Gender</option>
+                                 <option value="F">Female</option>
+                                  <option value="M">Male</option>
+                            </select> 
+                                <button id="side-cruisetypedrop" role="button" class="btn large-icon" data-target='#' data-toggle="modal">
                                 <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button> </div>
                         <br class="visible-phone" />
                         <div class="input-prepend input-append">
-                            <button id="side-cruisedest" role="button" class="btn nav-form" data-target='/modal-cruisedest.aspx' data-toggle="modal">Cruise Destination</button>
-                            <input id="sideCruiseDestination" type="text" placeholder="Cruise Destination" value="Cruise Destination" readonly style="display: none"/>
-                            <button id="side-cruisedestdrop" role="button" class="btn large-icon" data-target='/modal-cruisedest.aspx' data-toggle="modal">
-                                <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button> </div>
+
+
+                            <input id="sideTitaticDestination" type="text" placeholder="Titatic Destination" value="Titatic Destination" readonly style="display: none"/>
+            <select name="Class" id="side-cruisetype"  style="width: 100%;" class="ng-pristine ng-valid ng-touched"  form="carform">
+                <option value="9" selected="selected">Class</option>
+                <option value="First">First Class</option>
+                <option value="Second">Second Class</option>
+                <option value="Third">Third Class</option>
+            </select>
+               <button id="side-cruisetypedrop" role="button" class="btn large-icon" data-target='#' data-toggle="modal">
+                             
+                                       <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button> </div>
                         <br class="visible-phone" />
                         <div class="input-prepend input-append">
-                            <button id="side-cruisedate" role="button" class="btn nav-form" data-target='/modal-cruisedate.aspx' data-toggle="modal">Cruise Date</button>
-                            <input id="sideCruiseDate" type="text" placeholder="Departure Date" value="Departure Date" readonly style="display: none"/>
+ <select name="Port" style="width: 100%;" class="ng-pristine ng-valid ng-touched" form="carform">
+    <option value="9" selected="selected">Port</option>
+    <option value="1">Cherbourg</option>
+    <option value="3">Queenstown</option>
+    <option value="2">Southampton</option>
+</select>
+
+                            <input id="sideTitaticDate" type="text" placeholder="Departure Date" value="Departure Date" readonly style="display: none"/>
                             <button id="side-cruisedatedrop" role="button" class="btn large-icon" data-target='/modal-cruisedate.aspx' data-toggle="modal">
                                 <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button></div>
-                        <div align="center"> <button class="btn btn-blue btn-block" onclick="return GetSessionValues(1);" type="button">Search</button> </div>
-                        <!--It is updated by samy to remove the default.aspx and index.aspx from the URL so it is removed from the following URL -->
+               
+               <form action="{{=URL('search')}}" id="carform">
+  <input type="submit">
+</form>
+               
+                            <!--It is updated by samy to remove the default.aspx and index.aspx from the URL so it is removed from the following URL -->
                         <p class="small-link pull-right" style="padding: 6px 0 0 0; margin: 0;"><a href='http://cruiseweb.com/search/'>Advanced Search</a></p>
                     </div> </div></div></section>
  <script>
@@ -406,134 +409,147 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
  </script>
 
             <!-- Map -->
-            <section id="map-tabs">
-                <div class="container">
-                    <div class="map-title">A World of Choices</div>
-                    <div align="center" class="tab-group">
-                        <div class="tab-destinations"><a href="#" id="map-dest" alt="Cruise Destinations" title="Cruise Destinations"></a></div>
-                        <div class="tab-ports"><a href="#" id="map-port" alt="Departure Ports" title="Departure Ports"></a></div>
-                    </div>
-                </div>
-            </section>
-            <section id="world-map">
-                <div class="container">
-                    <div id="world-destinations">
-                        <h2 class="white">Cruise Destinations</h2>
-                        <ul>
-                            <li class="pin pin-africa">
-                                <a id="hlnkAfrica" title="Africa" href="http://cruiseweb.com/destinations/cruise-africa"><i class="icon-map-marker icon-white"></i>Africa </a></li>
-                            <li class="pin pin-alaska">
-                                <a id="hlnkAlaska" title="Alaska" href="http://cruiseweb.com/destinations/cruise-alaska"><i class="icon-map-marker icon-white"></i>Alaska</a></li>
-                            <li class="pin pin-antarctica">
-                                <a id="hlnkAntarctica" title="Antarctica" href="http://cruiseweb.com/destinations/cruise-antarctica"><i class="icon-map-marker icon-white"></i>Antarctica</a></li>
-                            <li class="pin pin-asia">
-                                <a id="hlnkAsia" title="Asia" href="http://cruiseweb.com/destinations/cruise-asia"><i class="icon-map-marker icon-white"></i>Asia</a></li>
-                            <li class="pin pin-australia">
-                                <a id="hlnkAustralia" title="Australia &amp; New Zealand" href="http://cruiseweb.com/destinations/cruise-australia-new-zealand"><i class="icon-map-marker icon-white"></i>Australia &amp; New Zealand</a></li>
-                            <li class="pin pin-bahamas">
-                                <a id="hlnkBahamas" title="Bahamas" href="http://cruiseweb.com/destinations/cruise-bahamas"><i class="icon-map-marker icon-white"></i>Bahamas</a></li>
-                            <li class="pin pin-bermuda">
-                                <a id="hlnkBermuda" title="Bermuda" href="http://cruiseweb.com/destinations/cruise-bermuda"><i class="icon-map-marker icon-white"></i>Bermuda</a></li>
-                            <li class="pin pin-canada">
-                                <a id="hlnkCanada" title="Canada &amp; New England" href="http://cruiseweb.com/destinations/cruise-canada-new-england"><i class="icon-map-marker icon-white"></i>Canada &amp; New England</a></li>
-                            <li class="pin pin-caribbean">
-                                <a id="hlnkCaribbean" title="Caribbean" href="http://cruiseweb.com/destinations/cruise-caribbean"><i class="icon-map-marker icon-white"></i>Caribbean</a></li>
-                            <li class="pin pin-hawaii">
-                                <a id="hlnkHawaii" title="Hawaii" href="http://cruiseweb.com/destinations/cruise-hawaii"><i class="icon-map-marker icon-white"></i>Hawaii</a></li>
-                            <li class="pin pin-medit">
-                                <a id="hlnkMediterranean" title="Mediterranean" href="http://cruiseweb.com/destinations/cruise-mediterranean"><i class="icon-map-marker icon-white"></i>Mediterranean</a></li>
-                            <li class="pin pin-mexico">
-                                <a id="hlnkMexican" title="Mexican Riviera" href="http://cruiseweb.com/destinations/cruise-mexican-riviera"><i class="icon-map-marker icon-white"></i>Mexican Riviera</a></li>
-                            <li class="pin pin-europe">
-                                <a id="hlnkNorthern" title="Northern Europe" href="http://cruiseweb.com/destinations/cruise-northern-europe"><i class="icon-map-marker icon-white"></i>Northern Europe</a></li>
-                            <li class="pin pin-panama">
-                                <a id="hlnkPanama" title="Panama Canal" href="http://cruiseweb.com/destinations/cruise-panama-canal"><i class="icon-map-marker icon-white"></i>Panama Canal</a></li>
-                            <li class="pin pin-southamerica">
-                                <a id="hlnkSouthAmerica" title="South America" href="http://cruiseweb.com/destinations/cruise-south-america"><i class="icon-map-marker icon-white"></i>South America</a></li>
-                            <li class="pin pin-tahiti">
-                                <a id="hlnkSouthPacific" title="South Pacific &amp; Tahiti" href="http://cruiseweb.com/destinations/cruise-south-pacific-tahiti"><i class="icon-map-marker icon-white"></i>South Pacific &amp; Tahiti</a></li>
-                            <li class="pin pin-transatlantic">
-                                <a id="hlnkTransatlantic" title="Transatlantic" href="http://cruiseweb.com/destinations/cruise-transatlantic"><i class="icon-map-marker icon-white"></i>Transatlantic</a></li>
-                            <li class="pin pin-world">
-                                <a id="hlnkWorldCruise" title="World Cruises" href="http://cruiseweb.com/destinations/cruise-world"><i class="icon-map-marker icon-white"></i>World Cruises</a></li>
-                            <li class="pin pin-river">
-                                <a id="hlnkRiver" title="River Cruises" href="http://cruiseweb.com/river-cruises/"><i class="icon-map-marker icon-white"></i>River Cruises</a></li>
-                        </ul>
-                    </div>
-                    <div id="world-ports">
-                        <h2 class="white">Departure Ports</h2>
-                        <ul>
-                            <li class="pin pin-africa"><a href="#" alt="Africa" title="Africa" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Africa');"><i class="icon-map-marker icon-white"></i>Africa</a></li>
-                            <li class="pin pin-asia"><a href="#" alt="Asia &amp; the Pacific" title="Asia &amp; the Pacific" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Asia');"><i class="icon-map-marker icon-white"></i>Asia &amp; the Pacific</a></li>
-                            <li class="pin pin-australia"><a href="#" alt="Australia &amp; New Zealand" title="Australia &amp; New Zealand" data-target='/modal-departureports.aspx' onclick="SendValueToSessionDestination('Australia %26 New Zealand');" data-toggle="modal"><i class="icon-map-marker icon-white"></i>Australia &amp; New Zealand</a></li>
-                            <li class="pin pin-caribbean"><a href="#" alt="Caribbean &amp; Central America" title="Caribbean &amp; Central America" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Caribbean %26 Central America');"><i class="icon-map-marker icon-white"></i>Caribbean &amp; Central America</a></li>
-                            <li class="pin pin-hawaii"><a href="#" alt="Hawaii" title="Hawaii" data-target='/modal-departureports.aspx' onclick="SendValueToSessionDestination('Hawaii');" data-toggle="modal"><i class="icon-map-marker icon-white"></i>Hawaii</a></li>
-                            <li class="pin pin-medit"><a href="#" alt="Mediterranean" title="Mediterranean" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Mediterranean');"><i class="icon-map-marker icon-white"></i>Mediterranean</a></li>
-                            <li class="pin pin-middleeast"><a href="#" alt="Middle East" title="Middle East" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Middle East');"><i class="icon-map-marker icon-white"></i>Middle East</a></li>
-                            <li class="pin pin-northamerica"><a href="#" alt="North America" title="North America" data-target='/modal-departureports.aspx' onclick="SendValueToSessionDestination('North America');" data-toggle="modal"><i class="icon-map-marker icon-white"></i>North America</a></li>
-                            <li class="pin pin-europe"><a href="#" alt="Northern Europe" title="Northern Europe" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Northern Europe');"><i class="icon-map-marker icon-white"></i>Northern Europe</a></li>
-                            <li class="pin pin-southamerica"><a href="#" alt="South America" title="South America" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('South America');"><i class="icon-map-marker icon-white"></i>South America</a></li>
-                            <li class="pin pin-tahiti"><a href="#" alt="South Pacific &amp; Tahiti" title="South Pacific &amp; Tahiti" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('South Pacific %26 Tahiti');"><i class="icon-map-marker icon-white"></i>South Pacific &amp; Tahiti</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+
+  
             <!-- 3-item spotlight -->
             <!-- Content -->
+
             <section class="container main-content arrow-box-up">
-                <div class="row-fluid">
-                    <div align="center" class="inline-lg-title">
-                        Every Type of Cruise.<br class="visible-phone" />
-                        Every Type of Vacation.
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="span4 feat">
-                        <a href='http://cruiseweb.com/popular-cruise-lines/'>
-                            <img src='http://cruiseweb.com/img/popular-cruises-grid.jpg'
-                                 alt="View Popular Cruises" title="View Popular Cruises" />
-                            <div class="feat-description">
-                                <h3>Popular Cruises</h3>
+
+
+
+
+            
+{{for b in a:}} 
+                     
+             <div class="row-fluid  ng-scope" ng-repeat="search in searchResults track by search.ItineraryId" after-last-item="afterlastItem">
+                        <div class="row-fluid">
+                            <!-- First column pic ng-if="search.DealDateHTML!=''"-->
+                            <div class="span4 photo">
+                                <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america">
+                                    <img class="lazy" ng-src="{{=URL('static','images/titanic.jpg')}}" title="Titanic" alt="Titanic" src="{{=URL('static','images/titanic.jpg')}}"></a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="span4 feat">
-                        <a href='http://cruiseweb.com/luxury-cruise-lines/'>
-                            <img 
-                                src='http://cruiseweb.com/img/luxury-cruises-grid.jpg' 
-                                alt="View Luxury Cruises" title="View Luxury Cruises" />
-                            <div class="feat-description">
-                                <h3>Luxury Cruises</h3>
+                            <!-- Second column details and dates -->
+                            <div class="span6 details">
+                                <div class="logo" align="center">
+                                    <div class="center-logo">
+
+                                    </div>
+                           
+                                </div>
+                                <div class="title">
+                                    <h3 class="color-blue"><a id="lnkItinerary1" ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii"><strong><span id="lblItineraryName" ng-bind="search.Planname" class="ng-binding">{{=b["passenger_firstname"]}}   {{=b["passenger_lastname"]}}</span></strong></a></h3>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="icon"><i class="icon-globe"></i></div>
+                                <div class="ship">
+                                    <p class="small-text">
+                                        <strong>Class:{{=b["passenger_class"]}}</strong>:
+                                        <br>
+                                        <strong>Gender:{{=b["passenger_gender"]}} </strong> 
+                                        
+                                    </p>
+                                </div>
+                                <div class="ship">
+                                    <p class="small-text">
+                                        
+                                        <strong>Home Destination:{{=b["home_destination"]}}</strong> <br>
+                                        <strong>Survived:{{=b["survived"]}}</strong> <br>
+                                        <strong>Passenger Age:{{=b["passenger_age"]}}</strong> <br> 
+                                        <strong>Passenger Ticket Number:{{=b["passenger_ticket_number"]}}</strong> <br>
+                                          </p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="icon"><i class="icon-map-marker"></i></div>
+                                <div class="places">
+                                    <p class="small-text">
+                                    </p>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <!-- Slider buttons -->
+
+
+                                <div class="clearfix"></div>
+                              
+                                <div class="clearfix"></div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="span4 feat">
-                        <a href='http://cruiseweb.com/river-cruise-lines/'>
-                            <img class="lazy" 
-                                src='http://cruiseweb.com/img/river-cruises-grid.jpg' 
-                                alt="View River Cruises" title="View River Cruises" />
-                            <div class="feat-description">
-                                <h3>River Cruises</h3>
+                            <!-- Third column price -->
+                            <div class="span2 price">
+                                <div class="favoriteI" align="center">
+                                                     </div>
+                                <div id="cphlUser_PriceDiv" class="ribbon">
+                                    <a href="#">
+                                </div>
+
+                                <br>
+                                <p class="small-text color-ocean"><strong>Fare:</strong></p>
+                                <div class="cost-digits">
+                                    <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii/2017-12-09#cruise-itinerary" ng-switch="" on="currentTabType" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii/2017-12-09#cruise-itinerary">
+                                        <!-- ngSwitchWhen: 1 --><!-- ngIf: search.insidePrice=='0.0000' --><!-- end ngSwitchWhen: -->
+                                        <!-- ngSwitchWhen: 1 --><!-- ngIf: search.insidePrice!='0.0000' --><span ng-switch-when="1" ng-bind="search.insidePrice | currency:'$':0" ng-if="search.insidePrice!='0.0000'" class="ng-binding ng-scope">{{=b["passenger_fare"]}}</span><!-- end ngIf: search.insidePrice!='0.0000' --><!-- end ngSwitchWhen: -->
+                                        <!-- ngSwitchWhen: 2 -->
+                                        <!-- ngSwitchWhen: 2 -->
+                                        <!-- ngSwitchWhen: 3 -->
+                                        <!-- ngSwitchWhen: 3 -->
+                                        <!-- ngSwitchWhen: 4 -->
+                                        <!-- ngSwitchWhen: 4 -->
+                                    </a>
+                                </div>
+                                <p class="tiny-text" ng-switch="" on="currentTabType">
+                                   <!-- ngSwitchWhen: 2 -->
+                                    <!-- ngSwitchWhen: 3 -->
+                                    <!-- ngSwitchWhen: 4 -->
+                                </p>
+
+                                <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" class="btn btn-orange btn-block" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii"><strong>
+{{  if b["ports_id"] == 1 :}}
+Cherbourg
+                    {{pass}}
+{{  if b["ports_id"] == 2 :}}
+Southampton
+                    {{pass}}
+                    {{  if b["ports_id"] == 3 :}}
+Queenstown
+                    {{pass}}                    
+                    
+                    
+                    </strong></a>
+
                             </div>
-                        </a>
-                    </div>
-                </div>
+                            <div class="clearfix"></div>
+
+                            <!-- Item page indicator -->
+                            <div class="qty-divider">
+                                <hr>
+                                <div class="number">
+                                    <h3><strong>
+                                        <span id="lblPageNumber" class="ng-binding">{{=b["id_passenger"]}}</span>
+                                    </strong></h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div
+    
             </section>
+{{pass}}
         </div>
         <!-- Begin ginormous footer region -->
         <section id="planning">
             <div class="container">
-                <div align="center" class="inline-lg-title">Let Us Help Plan Your Dream Vacation</div>
+                <div align="center" class="inline-lg-title">Let Us Help Plan Your Dream Titanic</div>
                 <div class="row-fluid">
                     <div class="span6">
-                        <h3><strong>Our Cruise Consultants<br class="visible-phone" />
+                        <h3><strong>Our Titatic Consultants<br class="visible-phone" />
                             Make It Easy</strong></h3>
                         <p>With a world of choices, we understand you may need some personal assistance to plan your perfect vacation. From finding the perfect destination to making sure everything is just right, we're here to help. Plus, our consultants know all the latest Specials & Promotions.</p>
-                        <p>Call us today and sleep easier tonight, knowing your dream vacation is just a cruise away.</p>
+                        <p>Call us today and sleep easier tonight, knowing your dream Titanic is just a cruise away.</p>
                     </div>
                     <div class="span6 phone">
                         <div class="planning-cta">
-                            <div class="free-planning-title" align="center"><strong>Free Cruise Planning</strong></div>
+                            <div class="free-planning-title" align="center"><strong>Free Titatic Planning</strong></div>
                             <div class="digits" align="center"><a href="tel:18003779383">1.800.377.9383</a></div>
                             <div class="free-planning-subtitle" align="center">QUICK. FREE. EASY.</div>
                             <br />
@@ -550,24 +566,24 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                         <div class="row-fluid">
                             <div class="span3">
                                 <!--Index.aspx is removed by samy from this url for not showing it in the url-->
-                                <h3><strong><a href='http://cruiseweb.com/search/'>Find a Cruise</a></strong></h3>
+                                <h3><strong><a href='http://cruiseweb.com/search/'>Find a Titatic</a></strong></h3>
                                 <ul>
-                                    <li><a href='http://cruiseweb.com/cruise-lines/'>All Cruise Types</a></li>
-                                    <li><a href='http://cruiseweb.com/popular-cruise-lines/'>Popular Cruises</a></li>
-                                    <li><a href='http://cruiseweb.com/luxury-cruise-lines/'>Luxury Cruises</a></li>
-                                    <li><a href='http://cruiseweb.com/river-cruise-lines/'>River Cruises</a></li>
+                                    <li><a href='http://cruiseweb.com/cruise-lines/'>All Titatic Types</a></li>
+                                    <li><a href='http://cruiseweb.com/popular-cruise-lines/'>Popular Titatics</a></li>
+                                    <li><a href='http://cruiseweb.com/luxury-cruise-lines/'>Luxury Titatics</a></li>
+                                    <li><a href='http://cruiseweb.com/river-cruise-lines/'>River Titatics</a></li>
                                 </ul>
                             </div>
                             <div class="span3">
                                 <h3><strong><a href='http://cruiseweb.com/deals/'>Deals</a></strong></h3>
-                                <ul id="footerDeals"><li ><a href=http://cruiseweb.com/deals/featured-cruise-deals>Featured Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals>Deals by Destination  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals>Deals by Cruise Line  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals-departing>Deals by Departure Port  </a></li><li ><a href=http://cruiseweb.com/deals/last-minute-cruise-deals>Last Minute Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/holiday-cruise-deals>Holiday Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/military-cruise-deals>Military Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/family-cruise-deals>Family Cruise Deals  </a></li><li><a href=http://cruiseweb.com/deals/featured-cruise-deals>More...</a></li></ul>
+                                <ul id="footerDeals"><li ><a href=http://cruiseweb.com/deals/featured-cruise-deals>Featured Titatic Deals  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals>Deals by Destination  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals>Deals by Titatic Line  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals-departing>Deals by Departure Port  </a></li><li ><a href=http://cruiseweb.com/deals/last-minute-cruise-deals>Last Minute Titatic Deals  </a></li><li ><a href=http://cruiseweb.com/deals/holiday-cruise-deals>Holiday Titatic Deals  </a></li><li ><a href=http://cruiseweb.com/deals/military-cruise-deals>Military Titatic Deals  </a></li><li ><a href=http://cruiseweb.com/deals/family-cruise-deals>Family Titatic Deals  </a></li><li><a href=http://cruiseweb.com/deals/featured-cruise-deals>More...</a></li></ul>
                             </div>
                             <div class="span3">
                                 <h3><strong><a href='http://cruiseweb.com/destinations/'>Destinations &amp; Ports</a></strong></h3>
                                 <ul id="footerDest"><li ><a href=http://cruiseweb.com/destinations/cruise-alaska>Alaska  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-asia>Asia  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-bahamas>Bahamas  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-bermuda>Bermuda  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-caribbean>Caribbean  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-hawaii>Hawaii  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-mediterranean>Mediterranean  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-northern-europe>Northern Europe  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-panama-canal>Panama Canal  </a></li><li><a  href=http://cruiseweb.com/destinations/>All Destinations</a></li><li><a href=http://cruiseweb.com/ports/>All Ports</a></li></ul>
                             </div>
                             <div class="span3">
-                                <h3><strong><a href='http://cruiseweb.com/cruise-lines/'>Cruise Lines</a></strong></h3>
+                                <h3><strong><a href='http://cruiseweb.com/cruise-lines/'>Titatic Lines</a></strong></h3>
                                 <ul>
                                     <li><a href='http://cruiseweb.com/popular-cruise-lines/'>Popular Lines</a></li>
                                     <li><a href='http://cruiseweb.com/luxury-cruise-lines/'>Luxury Lines</a></li>
@@ -582,7 +598,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                                     <strong><a href='http://cruiseweb.com/all-about-cruising/'>All About Cruising</a></strong></h3>
                                 <ul>
                                     <li><a href='http://cruiseweb.com/cruising-101/'>Cruising 101</a></li>
-                                    <li><a href='http://cruiseweb.com/specialty-cruises/'>Specialty Cruises</a></li>
+                                    <li><a href='http://cruiseweb.com/specialty-cruises/'>Specialty Titatics</a></li>
                                     <li><a href='http://cruiseweb.com/news-media/'>News &amp; Media</a></li>
                                 </ul>
                             </div>
@@ -599,7 +615,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                             </div>
                             <div class="span3">
                                 <h3>
-                                    <strong><a href='http://cruiseweb.com/why-cruise-web/'>Why Cruise Web</a></strong></h3>
+                                    <strong><a href='http://cruiseweb.com/why-cruise-web/'>Why Titatic Web</a></strong></h3>
                                 <ul>
                                     <li><a href='http://cruiseweb.com/our-approach/'>Our Approach</a></li>
                                     <li><a href='http://cruiseweb.com/low-price-guarantee/'>Low Price Guarantee</a></li>
@@ -625,13 +641,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                                 title="Social" class="title-icon">
                         </div>
                         <p>
-                            <a href="https://www.facebook.com/TheCruiseWeb" target="_blank">
+                            <a href="https://www.facebook.com/TheTitaticWeb" target="_blank">
                                 <img src='http://cruiseweb.com/img/social/icon-facebook.png' alt="Facebook" title="Facebook"></a><a
-                                    href="https://twitter.com/TheCruiseWeb/" target="_blank"><img src='http://cruiseweb.com/img/social/icon-twitter.png'
+                                    href="https://twitter.com/TheTitaticWeb/" target="_blank"><img src='http://cruiseweb.com/img/social/icon-twitter.png'
                                         alt="Twitter" title="Twitter"></a><a href="http://www.pinterest.com/thecruiseweb/"
                                             target="_blank"><img src='http://cruiseweb.com/img/social/icon-pintrest.png' alt="Pintrest" title="Pintrest"></a><a
                                                 href="https://plus.google.com/112592783437466041024/posts" target="_blank"><img src='http://cruiseweb.com/img/social/icon-google.png'
-                                                    alt="Google" title="Google"></a><a href="http://www.youtube.com/user/TheCruiseWeb"
+                                                    alt="Google" title="Google"></a><a href="http://www.youtube.com/user/TheTitaticWeb"
                                                         target="_blank"><img src='http://cruiseweb.com/img/social/icon-youtube.png' alt="YouTube" title="YouTube"></a>
                         </p>
 
@@ -664,12 +680,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                 <div class="row-fluid">
                     <div align="center" class="span4 offset4">
 					 <a href='http://cruiseweb.com/'>
-                        <img src='http://cruiseweb.com/img/logo-white.png' alt="Cruise Web" title="Cruise Web" style="max-height: 70px;" /></a>
+                        <img src='http://cruiseweb.com/img/logo-white.png' alt="Titatic Web" title="Titatic Web" style="max-height: 70px;" /></a>
                     </div>
                 </div>
                 <div class="row-fluid">
                     <div class="span6 offset3">
-                        <h3><strong>The Cruise Web, Inc.</strong></h3>
+                        <h3><strong>The Titatic Web, Inc.</strong></h3>
                         <p align="center">
                             3901 Calverton Boulevard, Suite 350, Calverton, MD 20705<br />
                               Phone: <a href="tel:18003779383">1.800.377.9383</a>  &nbsp; &nbsp;International: <a href="tel:0012404870155">001.240.487.0155</a>  &nbsp; &nbsp; Fax: 1.240.487.0154<br />
@@ -724,7 +740,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                     <br class="visible-phone" />
                     Login <span class="hidden-tablet">to
                                     <br class="visible-phone" />
-                        My Cruise Web</span>
+                        My Titatic Web</span>
                     <i class="icon-heart"></i>
                 </a>
             </div>
@@ -737,10 +753,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
         </div>
         <script type="text/javascript">
             if (!!('ontouchstart' in window)) {//check for touch device
-                $("a#navFindCruise").removeAttr("href");
+                $("a#navFindTitatic").removeAttr("href");
                 $(".navigationURL").removeAttr("href");
-               $("a#navFindCruise").removeAttr("data-hover");
-                $("a#navFindCruise").click(function (e) {
+               $("a#navFindTitatic").removeAttr("data-hover");
+                $("a#navFindTitatic").click(function (e) {
                     $.unblockUI();
                     $('.menu-destports').hide();
                     $('.menu-cruiselines').hide();
@@ -766,7 +782,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
                     $(".menu-contact").hide();
                     $('.menu-destports').toggle();
                 });
-                $('a#navCruiseLines').click(function (event) {
+                $('a#navTitaticLines').click(function (event) {
                     $('.menu-destports').hide();
                     $('.menu-deals').hide();
                     $('.menu-about').hide();
@@ -978,7 +994,7 @@ javascript:ClearSessionValuesOfQuickSearch();//]]>
                     window.location.href = '/search/' + "?values=" + JType + ":" + JLines + ":" + JDestination + ":" + JDateRangeCriteria + ":" + JDateRange + ":" + JDealDateRange + ":" + All;
                 }
                 else {
-                    All = "CruiseSearch";
+                    All = "TitaticSearch";
                     window.location.href = '/search/' + "?values=" + JType + ":" + JLines + ":" + JDestination + ":" + JDateRangeCriteria + ":" + JDateRange + ":" + JDealDateRange + ":" + All;
                 }
                 return false;

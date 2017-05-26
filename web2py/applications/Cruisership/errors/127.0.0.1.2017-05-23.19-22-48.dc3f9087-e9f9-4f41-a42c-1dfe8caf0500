@@ -1,0 +1,767 @@
+(dp1
+S'output'
+p2
+S'<class \'pymysql.err.InternalError\'> (1054, u"Unknown column \'a\' in \'where clause\'")'
+p3
+sS'layer'
+p4
+S'/home/diablo/Desktop/web2py/applications/Cruisership/views/default/search.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html>\\n<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->\\n<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!DOCTYPE html>\\n<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->\\n<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->\\n<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->\\n<!--[if gt IE 8]><!-->\\n<html class="no-js" lang="en" xmlns=\', escape=False)\nresponse.write(URL(\'static\',\'www.w3.org/1999/xhtml/index.html\'))\nresponse.write(\'>\\n<!--<![endif]-->\\n\', escape=False)\nimport json\ncnx = pymysql.connect(host=\'localhost\',user=\'root\',password=\'hades2525\',db=\'mydb\',charset=\'utf8mb4\',cursorclass=pymysql.cursors.DictCursor)\ncursor = cnx.cursor()\nquery = ("select * from passenger WHERE passenger_gender = a " )\n#query = ("select * from passenger WHERE =%s " % (request.vars.Gender(cast=str)) )\ncur = cursor.execute(query)\nresponse.write(\'\\n\', escape=False)\nresponse.write(request.vars)\nresponse.write(\'\\n\\n<!-- Mirrored from cruiseweb.com/ by HTTrack Website Copier/3.x [XR&CO\\\'2014], Mon, 08 May 2017 12:21:25 GMT -->\\n<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->\\n<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /><link rel="shortcut icon" href="faviconc619.ico?v=1.0" type="image/x-icon" /><link rel="stylesheet" href=\', escape=False)\nresponse.write(URL(\'static\',\'css/bootstrap.min.css\'))\nresponse.write(\' /><link rel="stylesheet" href=\', escape=False)\nresponse.write(URL(\'static\',\'css/bootstrap-responsive.min.css\'))\nresponse.write(\' /><link rel="stylesheet" href=\', escape=False)\nresponse.write(URL(\'static\',\'css/bootstrap-modal.css\'))\nresponse.write(\' /><link rel="stylesheet" href=\', escape=False)\nresponse.write(URL(\'static\',\'css/bootstrap-select.min.css\'))\nresponse.write(\' /><link rel="stylesheet" href="http://cruiseweb.com/css/pretty-checkable.css" /><link rel="stylesheet" href="http://cruiseweb.com/css/flexslider.css" /><link rel="stylesheet" href="http://cruiseweb.com/css/bootstrap-multiselect.css" type="text/css" /><link rel="stylesheet" href="http://cruiseweb.com/css/main.css" />\\n    <!-- Typekit -->\\n    <script type="text/javascript" src="http://cruiseweb.com/js/vendor/fvx8xua.js"></script><script type="text/javascript">try { Typekit.load(); } catch (e) { }</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script src="http://cruiseweb.com/js/vendor/jquery-migrate-1.2.1.min.js"></script>\\n\\t  <!-- Eloqua Tracking Script12 for personalquote,modal-emaildeal,modal-checkavailibilty.aspx-->\\n     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>\\n    <!--End Eloqua Tracking Script -->\\n\\n\\t\\t<script>document.domain = \\\'cruiseweb.com\\\';</script>\\n\\t\\t <script type="text/javascript">\\n         var _elqQ = _elqQ || [];\\n         _elqQ.push([\\\'elqSetSiteId\\\', \\\'179671029\\\']);\\n         _elqQ.push([\\\'elqTrackPageView\\\']);\\n         (function () {\\n             function async_load() {\\n                 var s = document.createElement(\\\'script\\\');\\n                 s.type = \\\'text/javascript\\\';\\n                 s.async = true;\\n                 s.src = \\\'http://img.en25.com/i/elqCfg.min.js\\\';\\n                 var x = document.getElementsByTagName(\\\'script\\\')[0];\\n                 x.parentNode.insertBefore(s, x);\\n             } if (window.addEventListener) window.addEventListener(\\\'DOMContentLoaded\\\', async_load, false);\\n             else if (window.attachEvent) window.attachEvent(\\\'onload\\\', async_load);\\n         })(); </script> \\n<script type="text/javascript" src="http://cruiseweb.com/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/bootstrap.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery-pretty-checkable.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider-min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery.animate-enhanced.min.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery.cookie.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/titlecase.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/vendor/jquery.blockUI.js"></script><script type="text/javascript" src="http://cruiseweb.com/js/main.js"></script><meta name="description" content="Looking for a cruise deal on the cruise vacation? Browse the best cruise deals or speak with our cruise travel agents today for even better options." /><meta name="keywords" content="Test" /><title>\\n\\tBest Cruise Deals, Best Cruise Travel Agents | The Cruise Web\\n</title></head>\\n<body>\\n    \\n<div>\\n<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />\\n<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />\\n<input type="hidden" name="__VSTATE" id="__VSTATE" value="H4sIAAAAAAAEANVaS3McNRAmW5iQQDDP8A4Kr3UojzfEebgc21W2cQhgJ66YR3GitDPaWcUazZSk8bL5A1y48Tf4E/ADuPIXuHPjAq3HrGfXu/Y81gQOXmta0qdutbrVkvrvM7PB7Mx579ri0tWrN24tLc0GFxsd/dNowO9G4+zsxcalGan6jMycC6hMGO4v3w4aTwP9nSdmLmQkHnMC5HOWnG95fnzLZzXwOco5EV0VsZnfn1phFK2tYNQVpLPaVSpZbrV8kVJJeqS94MdRKyCYyVaHYJUKEni20jPUtRUahUgKf7U5tisOIspbNMIhkQbHx4qEsehbGs5o2Hx+vPAwCZtIUcXIavMTqGqi1tpKsrYilYh5uIbuOCbQphkG6TYSoZWWa7DSgsYtDH+MrhWV7PQEunaiQFaAdh8KUlGOFY35f1eexeLyOAVtU06mKQ/8JljATIXTlex6GU1pDmAVot1YqEnCBY0L2gLPzPxR2MIYlsoDplNFTtHIbpwo6TbwgXYMH1O1s27MaID7pyjbzRNlu2t5mKpcEWVUYXGagt06UbAdx8RUJetgkO005Vo62eMbFgpJFTSesyb329kTZBu4WtlK4iRlWByKBf9bHB8MtfIiwlPPcKwZzvjdtX3zvlta/pHZulebCQ4C8FVeO1YqjpbR9eT7282BcOP6HxWtsChOTRj8yD7Wk7huStWBJLUw8L8ySBt3cYSlxtmwxepQRERpYFjasMXKUD4WtN0mmGuwzeyjMlwX9zClGuuuKVUGikhAFRECc8fbTp5QGZbDRtUlgnskFXFCNPA9R0JbhlQZOsEclAoTyjHTuLvmG23q7wwUAWpRWI3xNSU9tM4G/YPGrDXsH84dy18CMh1r0W7j9kzDE406v81XtOshiHKmbYWxPEswI6ZoFAPvETh5hnlgLcpR59GOI1fBjqWKOQBLif1uKolS1l4NXUPnKirg+zghHqNgvqrvzbVxP4bjxxWPk573kAhJ+tYIEx0tmkZobsM1mkf3YCl8blpVGLkDXx7DaUBEgBnx5nS1Rw6ICBmGZXdFj3xHR3Hbg0ZozoR1W4eNKgz8EPv7MuYHlMGoHRYLav3W5zn6PLpjKyrgs1h6mIeEET29jIKg3Drr7ViidVszD1aYVVUYI6Kw9eaZ39GEOlxrjceCgSfTEkA7Cl7COCNQ8n1bMY+2s5qKI/RjsT8oZOjfQtkuJl0q6Jgs9niP9Lz1SL8+eSx3zkkyOAXJFj7ADOysBwGR6OG+sbF1Q0PfZLRCMg+jPgJ/K8ADs7TtIjWLbOloE+gufKqADhslp8Cjl6O6PdPQ8+e8CuiwTNuCqn6e8c2MWINr0ZdqwLRFtaQamCnHwnjdTVMqj9DBqhtHxuWY0uFiesEupr9KLCY4TGl37+GICOrjgWLuWjpat/SKiomkn5+8HelXnzgIPnokBIMeXUP3sop6iyj2wW9QnOf3viVV5znBKfNCnIYp5XngXaCjTy29Brqg3CdSDiE7WnVUQULClSdhe+Pwi4fgH5hKtKcr4RcfGSdovGgX4Y8zJYaM+9rKsvjZoxzcmI3kbDT4QDdAgwAbfZZvUF5EkKodp+LIStpz9HoLSVJ2oCONoaW0lxGrKybltAfbXuAJClB58K9cDXqga6qPcED3dTRqLEHa/UoTkLGD6nhH+HWwNbntUR6ALx5C/sbRji7Ll2aDi0/au/Ez7obcrNOfzq/omww36vjLCOuzzbCeTIhP9aXG4LrB+nG0iCBE0pv7Mlq8+gG63+lAjCMIQfc3NpF2pebjS5rAGQA4DIlabX7XBie73yx2GfKZvQwxJw1wKhD6ib5mzVuEgeETgnt9H2+vQiCir8RZIHAY4raWqwNSEuAtoAfIZxC8w3kFQnkimtnxpQ1haCjiFPYPw9UySgWbm44IV/RBqAVjD103naSo0UBgnLpG4wLUo6qL0gSpGF1Hdx5sbaFdIvblR1PVE2HamXpxx5P4AFa/HKOuEpw9Dj0dJ0IldeXCgzGK2tnbHEyE3mpoQNCePlklLJXoCxoAGVNm5mWquhpiyw4MEjNyVGMlWXwMSisgyxjVBeAjjXf85SzKsygTzBeRvnptatWOTHmFFyWHy/CjfrPMbbAtt025bR/9brm3F2dL+Yve4Xexy4MVZo5j5rZ4bUhMjQpcSl/QRPdo2sh/MqLdZvQUInsedOX/y9TdOG7qcsHQlKYuj/jvTt3ou980J/Hm8esvf4c3tSU4BDp+KoPGy/ra89Iz98Bph1iRrwSbaRW/ve/o818QNF4xl6eNMl3NuwF0vei6LhbvykHLvrIjv+q6e6WeHKDja67jWvGOqVQQiMAxUN/8PIKJhvgIkF53SFfLPlhA3zfK97XPEtD3Tdf3doknCY4Dyz7hoWP/LQdzrfzLBvR+u7Tm7UMGdL3kut6s9nQBCO84hKUSCN/DuuH62EGJ0LOISmOMvHQAxmWHcaPSkwYAvFt6KmScqm52MwMI7zmE4q8qFiHBPu1Q31O4S5XWyvulWQGj4BIrWE5gk4DwgUNYKIxgDqjQ80PX872xPYeOii1o3rRxyM8184smJvzUyYmZlHQzFczcHlkTM7fnHZN8UnKAiUkmx2V9TCPRY1LmxVSSLSZmP0wh4WFCBsKYw1Lp1b0TC7KwsJAL3+es2fxZyGwmvv3bh/+S8k9IANCv/7WRsiwAlwJQH8+lArg8gNp4h/kAh3eVdTFdUoDNCKiNNpwZMJQWUBt7ND1gJDegNv5QjkA+QeCoHRVOE1hnbCRvpqhBulc9DeCe5TPr+wcdbpxIlysAAA==" />\\n<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />\\n</div>\\n\\n\\n\\n\\n\\n\\n<script type="text/javascript">\\n//<![CDATA[\\nif (typeof(Sys) === \\\'undefined\\\') throw new Error(\\\'ASP.NET Ajax client-side framework failed to load.\\\');\\n//]]>\\n</script>\\n\\n<script src="http://cruiseweb.com/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tSn-U-hqP1KswKnTt2AgSgWk4Edvq5BnkFqfywhtjWacMB-Y1vIXtX1OSXL5uytyW7sK9jZUgUCMyu_yNwDD3zAVFJ9g6gdNIJIpsVUAC2iPtjk-O0INfVMwYq0vsTQ5rhd1DJDge9u5KVal5DFPJqtTEj4xwe4iA-OF3ST7j19j0&amp;t=4794f07b" type="text/javascript"></script><div id="backtotop" class="hidden-phone"> &nbsp; </div>\\n        <input name="ctl00$hdMasterType" type="hidden" id="hdMasterType" />\\n        <input name="ctl00$hdMasterLines" type="hidden" id="hdMasterLines" />\\n        <input name="ctl00$hdMasterDestination" type="hidden" id="hdMasterDestination" />\\n        <input name="ctl00$hdMasterDateRange" type="hidden" id="hdMasterDateRange" />\\n        <input name="ctl00$hdMasterDateRangeCriteria" type="hidden" id="hdMasterDateRangeCriteria" />\\n        <input name="ctl00$hdMasterDealDateRange" type="hidden" id="hdMasterDealDateRange" />\\n        <script type="text/javascript">\\n//<![CDATA[\\nSys.WebForms.PageRequestManager._initialize(\\\'ctl00$ScriptManager1\\\', \\\'form1\\\', [], [], [], 90, \\\'ctl00\\\');\\n//]]>\\n</script>\\n\\n        <div class="page-container">\\n            <!--[if lt IE 8]>\\n            <div class="browserdetect">\\n            \\t<h2 class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</h2>\\n            </div>\\n        <![endif]-->\\n            <!-- Logo and header toolbar -->\\n            <header><div class="container mobile-header">\\n                    <!-- Logo -->\\n                    <div class="logo" align="center">\\n                        <!--Default.aspx is removed by samy from this url for not showing it in the url-->\\n                        <a href=\\\'http://cruiseweb.com/\\\'> <img src=\\\'http://cruiseweb.com/img/logo.png\\\' title="Cruise Web" /></a>\\n                    </div>\\n                    <!-- Toolbar links -->\\n                    <div class="links">\\n                        <ul><li class="link hidden-phone"><a href=\\\'http://cruiseweb.com/already-booked/\\\'><i class="icon-tags"></i>\\n                                <br class="visible-phone" />\\n                                <span class="hidden-tablet">Already</span>\\n                                <br class="visible-phone" />\\n                                Booked?</a></li>\\n                            <li class="divider-vertical hidden-phone"></li>\\n                            <li id="lnkLogin" style="display:;" class="link hidden-phone"><a data-toggle="modal" onclick="javascript:showUsernamemodal(2);" href="#"><i class="icon-heart"></i>\\n                                <br class="visible-phone" />\\n                                Login <span class="hidden-tablet">to\\n                                    <br class="visible-phone" />\\n                                    My Cruise Web</span></a></li>\\n                            <li id="lnkMyFav" style="display:none;" class="link hidden-phone"><a href=\\\'http://cruiseweb.com/favorites/\\\'><i class="icon-heart"></i>\\n                                <br class="visible-phone" />\\n                                <span class="hidden-tablet">\\n                                    <br class="visible-phone" />\\n                                    My Favorites</span></a></li>\\n                            <li class="divider-vertical hidden-phone"></li>\\n                            <li id="cruiseregister" style="display:;" class="link hidden-phone" role="button">\\n                                <a href="#" onclick="javascript: showUsernamemodal(1);"><i class="icon-edit"></i>\\n                                    <br class="visible-phone" />\\n                                    Register</a></li>\\n                            <li id="cruiselogout" style="display:none;" class="link hidden-phone" role="button">\\n                                <a id="lnkLogout" class="MyStyleClass" href="javascript:__doPostBack(&#39;ctl00$lnkLogout&#39;,&#39;&#39;)"><i class="icon-edit"></i>\\n                                    <br class="visible-phone" />Logout </a>\\n                            </li>\\n                            <li class="phone">\\n                                <div class="digits"><strong><a href="tel:18003779383">1.800.377.9383</a></strong></div>\\n                                <!--<p class="visible-phone">Tap our phone number to <a href="tel:18003779383">call us</a><br> for a FREE consultation</p>-->\\n                            </li>\\n                        </ul>\\n                        <div class="button visible-phone" align="center">\\n                            <a href="#" data-target=\\\'/personalquote-modal.htm\\\' data-toggle="modal" class="btn btn-orange modal-iframe"><strong>Personal Quote</strong></a>\\n                        </div>\\n                    </div>\\n                    <!-- Buttons & search -->\\n                    <div class="buttons hidden-phone">\\n                        <ul><li class="button" id="btnEmailDeals">\\n                                <a href="#" data-target=\\\'/modal-emaildeals.htm\\\' data-toggle="modal" class="btn btn-orange modal-iframe"><strong>Email Deals</strong></a>\\n                            </li>\\n                            <li class="button">\\n                                <a href="#" data-target=\\\'/personalquote-modal.htm\\\' data-toggle="modal" class="btn btn-orange modal-iframe"><strong>Personal Quote</strong></a></li>\\n                            <!--<li class="search"><a class="btn large-icon" href="search/"><img src=\\\'/img/icon-magnify.png\\\' title="Search" /></a></li>-->\\n                            <li class="sitesearch"><iframe style="border: none; padding: 0; margin: 0;" name="frmSearch" src=\\\'http://cruiseweb.com/internalsearch.aspx\\\' id="frmTop" marginheight="0" marginwidth="0" frameborder="0" width="200" height="32"></iframe>\\n                            </li></ul></div> </div>  </header>\\n            <!-- Cruise search modal placeholder -->\\n            <div id="ajax-cruisesearchmodal" class="modal hide fade" tabindex="-1" data-focus-on="input:first"></div>\\n            <!-- Main navigation -->\\n            <div class="navigation">\\n                <div class="container">\\n                    <div class="navbar navbar-inverse">\\n                       \\n\\n                         <ul class="pull-left visible-phone micro-nav">\\n                        <li class="link pull-left"><a href=\\\'http://cruiseweb.com/already-booked/\\\'><i class="icon-tags icon-white"></i> Booked?</a></li>\\n                        \\n                         <li class="link pull-left"><a href="javascript:void(0);" onclick="javascript:showUsernamemodal(2)"><i class="icon-heart icon-white"></i>Login</a></li>\\n                        <li class="link pull-left"><a href="#" onclick="javascript:showUsernamemodal(1)"><i class="icon-edit icon-white"></i>Register</a></li>\\n                   \\n                        \\n                        \\n                    </ul>\\n                        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->\\n                        <a class="btn btn-navbar btn-inverse" data-toggle="collapse" data-target=".nav-collapse">\\n                            <span class="icon-bar"></span>\\n                            <span class="icon-bar"></span>\\n                            <span class="icon-bar"></span>\\n                        </a>\\n                        <div class="nav-collapse collapse navbar-responsive-collapse">\\n                            <ul class="nav">\\n                                <!-- Find a Cruise -->\\n                                <!-- Override the click action which closes this panel -->\\n                                <li class="dropdown"><a id="navFindCruise" role="button" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" data-delay="500"  href="javascript:void(0);">Find a Cruise</a>\\n                                    <div class="dropdown-menu menu menu-search" role="menu" aria-labelledby="Find a Cruise">\\n                                        <!-- Triggers for AJAX modal panels -->\\n                                        <div class="input-prepend input-append">\\n                                            <button id="menu-cruisetype" role="button" class="btn nav-form" data-target=\\\'/modal-cruisetype.aspx\\\' data-toggle="modal">Cruise Type</button>\\n                                            <input id="mainCruiseType" type="text" placeholder="Cruise Type" value="Cruise Type" readonly style="display: none" />\\n                                            <button id="menu-cruisetypedrop" role="button" class="btn large-icon" data-target=\\\'/modal-cruisetype.aspx\\\' data-toggle="modal">\\n                                                <img src=\\\'http://cruiseweb.com/img/icon-droparrow.png\\\' title="Search" /></button>\\n                                        </div>\\n                                        <br class="visible-phone" />\\n                                        <div class="input-prepend input-append">\\n                                            <button id="menu-cruisedest" role="button" class="btn nav-form" data-target=\\\'/modal-cruisedest.aspx\\\' data-toggle="modal">Cruise Destination</button>\\n                                            <input id="mainCruiseDestination" type="text" placeholder="Cruise Destination" value="Cruise Destination" readonly style="display: none" />\\n                                            <button id="menu-cruisedestdrop" role="button" class="btn large-icon" data-target=\\\'/modal-cruisedest.aspx\\\' data-toggle="modal">\\n                                                <img src=\\\'http://cruiseweb.com/img/icon-droparrow.png\\\' title="Search" /></button>\\n                                        </div>\\n                                        <br class="visible-phone" />\\n                                        <div class="input-prepend input-append">\\n                                            <button id="menu-cruisedate" role="button" class="btn nav-form" data-target=\\\'/modal-cruisedate.aspx\\\' data-toggle="modal">Cruise Date</button>\\n                                            <input id="mainCruiseDate" type="text" placeholder="Departure Date" value="Departure Date" readonly style="display: none" />\\n                                            <button id="menu-cruisedatedrop" role="button" class="btn large-icon" data-target=\\\'/modal-cruisedate.aspx\\\' data-toggle="modal">\\n                                                <img src=\\\'http://cruiseweb.com/img/icon-droparrow.png\\\' title="Search" /></button>\\n                                        </div>\\n                                        \\n                                        <button class="btn btn-blue btn-block" onclick="return GetSessionValues(1);" type="button">Search</button>\\n                                        <!--Index.aspx is removed by samy from this url for not showing it in the url-->\\n                                        <p class="small-link" style="padding: 6px 0 0 0; margin: 0;"><a onclick="javascript:showBlockPanel();" href=\\\'http://cruiseweb.com/search/\\\'>Advanced Search</a></p>\\n                                    </div> </li>\\n                                <li class="divider-vertical visible-desktop"></li>\\n                                <!-- Deals -->\\n                                <!-- Adding class="disabled" to make the href work on click -->\\n                                <li class="dropdown"><a id="navDeals" role="button" class="dropdown-toggle disabled navigationURL" data-toggle="dropdown" data-hover="dropdown" href=\\\'http://cruiseweb.com/deals/\\\'>Deals</a>\\n                                    <div class="dropdown-menu menu menu-deals" role="menu" aria-labelledby="Cruise Deals">\\n                                        <ul id="dealFirst"><li ><a href=http://cruiseweb.com/deals/featured-cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage1.jpg\\\' title=\\\'Deal\\\' /><p><strong> Featured Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage2.jpg\\\' title=\\\'Deal\\\' /><p><strong> Deals by Destination  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage3.jpg\\\' title=\\\'Deal\\\' /><p><strong> Deals by Cruise Line  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals-departing><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage4.jpg\\\' title=\\\'Deal\\\' /><p><strong> Deals by Departure Port  </strong></p></a></li></ul>\\n                                        <ul id="dealSecond"><li ><a href=http://cruiseweb.com/deals/last-minute-cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage5.jpg\\\' title=\\\'Deal\\\' /><p><strong> Last Minute Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/holiday-cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage6.jpg\\\' title=\\\'Deal\\\' /><p><strong> Holiday Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/military-cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage7.jpg\\\' title=\\\'Deal\\\' /><p><strong> Military Cruise Deals  </strong></p></a></li><li ><a href=http://cruiseweb.com/deals/family-cruise-deals><img src=\\\'http://cruiseweb.com/admin/images/dealcategory/imagea/dealcataimage8.jpg\\\' title=\\\'Deal\\\' /><p><strong> Family Cruise Deals  </strong></p></a></li></ul>\\n                                    </div>\\n                                </li>\\n                                <li class="divider-vertical visible-desktop"></li>\\n                                <!-- Destinations -->\\n                                <!-- Adding class="disabled" to make the href work on click -->\\n                                <li class="dropdown"><a id="navDestPorts" role="button" class="dropdown-toggle disabled navigationURL" data-toggle="dropdown" data-hover="dropdown" href=\\\'http://cruiseweb.com/destinations/\\\'>Destinations &amp; Ports</a>\\n                                    <div class="dropdown-menu menu menu-destports" role="menu" aria-labelledby="Destinations and Ports">\\n                                        <ul><li id="lidestination"><a href=http://cruiseweb.com/destinations/popular><img src=http://cruiseweb.com/img/nav/destinations-menu-image.jpg title=\\\'Popular Destinations\\\' /><p style=\\\'padding-bottom: 4px;\\\'><strong>Popular Destinations</strong></p></a><a href=http://cruiseweb.com/destinations/cruise-alaska><p>Alaska</p></a><a href=http://cruiseweb.com/destinations/cruise-asia><p>Asia</p></a><a href=http://cruiseweb.com/destinations/cruise-bahamas><p>Bahamas</p></a><a href=http://cruiseweb.com/destinations/cruise-bermuda><p>Bermuda</p></a><a href=http://cruiseweb.com/destinations/cruise-caribbean><p>Caribbean</p></a><a href=http://cruiseweb.com/destinations/cruise-hawaii><p>Hawaii</p></a><a href=http://cruiseweb.com/destinations/cruise-mediterranean><p>Mediterranean</p></a><a href=http://cruiseweb.com/destinations/cruise-northern-europe><p>Northern Europe</p></a><a href=http://cruiseweb.com/destinations/cruise-panama-canal><p>Panama Canal</p></a> <a  href=http://cruiseweb.com/destinations/><p>View All</p></a></li> <li id="liPorts"><a href=http://cruiseweb.com/ports/popular><img src=http://cruiseweb.com/img/nav/departure-ports-menu-image.jpg title=\\\'Popular Departure Ports\\\' /><p style=\\\'padding-bottom: 4px;\\\'><strong>Popular Departure Ports</strong></p></a><a href=http://cruiseweb.com/ports/departs-baltimore-maryland><p>Baltimore, Maryland</p></a><a href=http://cruiseweb.com/ports/departs-boston-massachusetts><p>Boston, Massachusetts</p></a><a href=http://cruiseweb.com/ports/departs-cape-liberty-(bayonne)-new-jersey><p>Cape Liberty (Bayonne), New Jersey</p></a><a href=http://cruiseweb.com/ports/departs-fort-lauderdale-(port-everglades)><p>Fort Lauderdale (Port Everglades)</p></a><a href=http://cruiseweb.com/ports/departs-jacksonville-florida><p>Jacksonville, Florida</p></a><a href=http://cruiseweb.com/ports/departs-los-angeles-california><p>Los Angeles, California</p></a><a href=http://cruiseweb.com/ports/departs-miami-florida><p>Miami, Florida</p></a><a href=http://cruiseweb.com/ports/departs-new-orleans-louisiana><p>New Orleans, Louisiana</p></a><a href=http://cruiseweb.com/ports/departs-new-york-new-york><p>New York, New York</p></a> <a  href=http://cruiseweb.com/ports/><p>View All</p></a></li> </ul>\\n                                    </div>\\n                                </li>\\n                                <li class="divider-vertical visible-desktop"></li>\\n                                <!-- Cruise Lines -->\\n                                <!-- Adding class="disabled" to make the href work on click -->\\n                                <li class="dropdown"><a id="navCruiseLines" role="button" class="dropdown-toggle disabled navigationURL " data-toggle="dropdown" data-hover="dropdown" href=\\\'http://cruiseweb.com/cruise-lines/\\\'>Cruise Lines</a>\\n                                <div class="dropdown-menu menu menu-cruiselines" role="menu" aria-labelledby="Cruise Lines">\\n                                <ul><li><a href=\\\'http://cruiseweb.com/popular-cruise-lines/\\\'> <img src=\\\'http://cruiseweb.com/img/nav/popular-cruise-lines-menu-image.jpg\\\' title="Popular Lines" /><p><strong>Popular Lines</strong></p></a></li>\\n                                <li><a href=\\\'http://cruiseweb.com/luxury-cruise-lines/\\\'><img src=\\\'http://cruiseweb.com/img/nav/luxury-cruise-lines-menu-image.jpg\\\' title="Luxury Lines" /><p><strong>Luxury Lines</strong></p></a></li>\\n                                <li><a href=\\\'http://cruiseweb.com/river-cruise-lines/\\\'><img src=\\\'http://cruiseweb.com/img/nav/river-cruise-lines-menu-image.jpg\\\' title="River Lines" /><p><strong>River Lines</strong></p></a></li>\\n                                <li><a href=\\\'http://cruiseweb.com/cruise-lines/\\\'><img src=\\\'http://cruiseweb.com/img/nav/all-cruise-lines-menu-image.jpg\\\' title="All Lines" /><p><strong>All Lines</strong></p></a></li>\\n                                </ul><ul><li id="liPopular" class="extra"><a href=http://cruiseweb.com/cruise-lines/avalon-waterways><p>Avalon Waterways</p></a><a href=http://cruiseweb.com/cruise-lines/azamara-club-cruises><p>Azamara Club Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/carnival-cruise-line><p>Carnival Cruise Line</p></a><a href=http://cruiseweb.com/cruise-lines/celebrity-cruises><p>Celebrity Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/crystal-cruises><p>Crystal Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/cunard><p>Cunard</p></a><a href=http://cruiseweb.com/cruise-lines/fathom><p>Fathom</p></a></li> <li id="liLuxury" class="extra"><a href=http://cruiseweb.com/cruise-lines/holland-america-line><p>Holland America Line</p></a><a href=http://cruiseweb.com/cruise-lines/msc-cruises><p>Msc Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/norwegian-cruise-line><p>Norwegian Cruise Line</p></a><a href=http://cruiseweb.com/cruise-lines/oceania-cruises><p>Oceania Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/paul-gauguin-cruises><p>Paul Gauguin Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/princess-cruises><p>Princess Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/regent-seven-seas-cruises><p>Regent Seven Seas Cruises</p></a></li> <li id="liRiver" class="extra"><a href=http://cruiseweb.com/cruise-lines/royal-caribbean-international><p>Royal Caribbean International</p></a><a href=http://cruiseweb.com/cruise-lines/seabourn-cruise-line><p>Seabourn Cruise Line</p></a><a href=http://cruiseweb.com/cruise-lines/silversea-cruises><p>Silversea Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/uniworld-river-cruises><p>Uniworld River Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/viking-oceans><p>Viking Oceans</p></a><a href=http://cruiseweb.com/cruise-lines/viking-river-cruises><p>Viking River Cruises</p></a><a href=http://cruiseweb.com/cruise-lines/windstar-cruises><p>Windstar Cruises</p></a></li> </ul></div></li><li class="divider-vertical visible-desktop"></li>\\n                                <!-- All About Cruising -->\\n                                <!-- Adding class="disabled" to make the href work on click -->\\n                                <li class="dropdown pull-right"><a id="navAbout" role="button" class="dropdown-toggle disabled navigationURL " data-toggle="dropdown" data-hover="dropdown" href=\\\'http://cruiseweb.com/all-about-cruising/\\\'>All About Cruising</a>\\n                                <div class="dropdown-menu menu menu-about" role="menu" aria-labelledby="All About Cruising"><ul><li><a href=\\\'http://cruiseweb.com/cruising-101/\\\'><img src=\\\'http://cruiseweb.com/img/nav/cruising-101-menu-image.jpg\\\' title="Cruising 101" /><p>\\n                                <strong>Cruising 101</strong></p> </a><a href="#" data-target=\\\'/personalquote-modal.htm\\\' data-toggle="modal" class="modal-iframe"><p>Free Consultation</p> </a><a href=\\\'http://cruiseweb.com/why-cruise/\\\'>\\n                                <p> Why Cruise? </p></a><a href=\\\'http://cruiseweb.com/cruise-faq/\\\'><p>Cruise FAQ</p></a><a href=\\\'http://cruiseweb.com/shore-excursions/\\\'><p>Shore Excursions </p>\\n                                </a><a href=\\\'http://cruiseweb.com/cruising-tips/\\\'><p>Cruising Tips</p></a><a href=\\\'http://cruiseweb.com/photo-galleries/\\\'><p>Photo Galleries</p>\\n                                </a></li><li><a href=\\\'http://cruiseweb.com/specialty-cruises/\\\'><img src=\\\'http://cruiseweb.com/img/nav/specialty-cruises-menu-image.jpg\\\' title="Specialty Cruises" /><p><strong>Specialty Cruises</strong>\\n                                </p></a><a href=\\\'http://cruiseweb.com/group-cruises/\\\'><p>Group Cruises</p></a><a href=\\\'http://cruiseweb.com/business-incentive-cruises/\\\'><p>Business / Incentive Cruises</p></a><a href=\\\'http://cruiseweb.com/events-meetings-atsea/\\\'>\\n                                <p>Events &amp; Meetings at Sea </p></a><a href=\\\'http://cruiseweb.com/private-charters/\\\'><p>Private Charters</p></a><a href=\\\'http://cruiseweb.com/theme-cruises/\\\'>\\n                                <p>Theme Cruises </p></a><a href=\\\'http://cruiseweb.com/river-cruises/\\\'><p>River Cruises </p></a><a href=\\\'http://cruiseweb.com/cruise-tours/\\\'><p>Cruise Tours</p> </a><a href=\\\'http://cruiseweb.com/wedding-cruises/\\\'>\\n                                <p>Wedding Cruises</p></a><a href=\\\'http://cruiseweb.com/hosted-cruises/\\\'><p>Hosted Cruises</p></a><a href=\\\'http://cruiseweb.com/family-cruises/\\\'><p>Family Cruises</p>\\n                                </a></li><li><a href=\\\'http://cruiseweb.com/news-media/\\\'><img src=\\\'http://cruiseweb.com/img/nav/news-and-media-menu-image.jpg\\\' title="News Media" /><p>\\n                                <strong>News &amp; Media</strong></p></a><a href=\\\'http://cruiseweb.com/press-news/\\\'><p>Press &amp; News</p></a><a href=\\\'http://cruiseweb.com/photo-galleries/\\\'>\\n                                <p>Photo Galleries </p></a><a href=\\\'http://cruiseweb.com/testimonials/\\\'><p>Testimonials</p></a><a target="_blank" href="http://cruiseweb.com/blog/"><p> Blog</p></a><a href=\\\'http://cruiseweb.com/newsletter/\\\'>\\n                                <p>Newsletter</p></a><a href=\\\'http://cruiseweb.com/social-media/\\\'><p>Social Media </p></a></li>\\n                                </ul></div></li><li class="divider-vertical visible-desktop"></li>\\n                                <!-- Contact -->\\n                                <!-- Adding class="disabled" to make the href work on click -->\\n                                <li class="dropdown pull-right"><a id="navContact" role="button" class="dropdown-toggle disabled navigationURL " data-toggle="dropdown" data-hover="dropdown" href=\\\'http://cruiseweb.com/contact-and-support/\\\'>Contact &amp; Support</a>\\n                                    <div class="dropdown-menu menu menu-contact" role="menu" aria-labelledby="Contact and Support">\\n                                        <ul>\\n                                            <li><a href=\\\'http://cruiseweb.com/already-booked/\\\'>\\n                                                <img src=\\\'http://cruiseweb.com/img/nav/already-booked-menu-image.jpg\\\' title="Already Booked" /><p>\\n                                                    <strong>Already Booked?</strong>\\n                                                </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/already-booked/\\\'>\\n                                                <p>\\n                                                    Pre-registration\\n                                                </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/passports-visas/\\\'>\\n                                                <p>\\n                                                    Passports / Visas\\n                                                </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/already-booked/\\\'>\\n                                                <p>Tickets </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/travel-protection/\\\'> <p>Travel Protection </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/shore-excursions/\\\'><p>Shore Excursions </p> </a></li>\\n                                            <li><a href=\\\'http://cruiseweb.com/why-cruise-web/\\\'>\\n                                                <img src=\\\'http://cruiseweb.com/img/nav/why-cruise-web-menu-image.jpg\\\' title="Why Cruise Web" /><p>\\n                                                    <strong>Why Cruise Web?</strong>\\n                                                </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/our-approach/\\\'>\\n                                                <p>Our Approach</p>\\n                                            </a><a href=\\\'http://cruiseweb.com/low-price-guarantee/\\\'>\\n                                                <p>Low Price Guarantee</p>\\n                                            </a><a href=\\\'http://cruiseweb.com/gift-certificates/\\\'>\\n                                                <p>Gift Certificates </p>\\n                                            </a><a href=\\\'http://cruiseweb.com/careers/\\\'><p>Careers </p> </a></li>\\n                                            <li><a href=\\\'http://cruiseweb.com/need-help/\\\'>\\n                                                <img src=\\\'http://cruiseweb.com/img/nav/need-help-menu-image.jpg\\\' title="Need Help" /><p>\\n                                                    <strong>Need Help?</strong>\\n                                                </p>\\n                                            </a><a href="#" data-target=\\\'http://cruiseweb.com/personalquote-modal.htm\\\'\\n                                                    data-toggle="modal" class="modal-iframe">\\n                                                    <p>Free Consultation</p>\\n                                                </a>\\n                                                <a href=\\\'http://cruiseweb.com/customer-service/\\\'>\\n                                                    <p>\\n                                                        Customer Service\\n                                                    </p>\\n                                                </a><a href=\\\'http://cruiseweb.com/contact-us/\\\'>\\n                                                    <p>\\n                                                        Contact Us\\n                                                    </p>\\n                                                </a></li>\\n                                        </ul> </div> </li></ul> </div>  </div> </div></div>\\n            <!-- Main site container -->\\n            \\n    \\n<script type="text/javascript">\\n    $(document).ready(function () { pageFavorite();});\\n    $(\\\'#sharebar .favorite a\\\').click(function (e) {e.preventDefault(); });\\n    var isPageFavorite;\\n    function pageFavorite() {\\n        var IsFavourite = $("[id$=hfIsFavourite]").val();\\n        if (IsFavourite.toLowerCase() == \\\'false\\\') {\\n            $("#sharebar .favorite a").removeClass("active");\\n            $("#sharebar .favorite").find(".mark-fave").show();\\n            $("#sharebar .favorite").find(".unmark-fave").hide();\\n        } else {\\n            $("#sharebar .favorite a").addClass("active");\\n            $("#sharebar .favorite").find(".mark-fave").hide();\\n            $("#sharebar .favorite").find(".unmark-fave").show();\\n        } \\n    }\\n    function fireFavEvent() { __doPostBack(\\\'fav\\\', \\\'eventArgument\\\');}\\n</script>\\n<!-- Share this page Script BEGIN -->\\n<script type="text/javascript">var addthis_config =\\n{\\n    "data_track_address_bar": false,\\n    "data_track_clickback": false\\n};</script>\\n<script type="text/javascript"  src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5265f51c2796a2a2"></script>\\n<!-- Share this page Script END -->\\n<div id="sharebar"> <div class="sharebar-position">   <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-5265f51c2796a2a2"> <img src=\\\'http://cruiseweb.com/img/lg-share-en.gif\\\'  width="125" height="16" alt="Bookmark and Share" style="border: 0" /></a> <div class="favorite" onclick="javascript:fireFavEvent();"><a href="#" class="active" alt="" title="Favorite"><span class="mark-fave">Mark as favorite</span><span class="unmark-fave">Unmark favorite</span></a></div> </div></div>\\n<input type="hidden" name="ctl00$cphlUser$RotatingBanner$hfIsFavourite" id="cphlUser_RotatingBanner_hfIsFavourite" value="False" /><div id="cphlUser_RotatingBanner_divRotatingBanner"><input type="hidden" name="ctl00$cphlUser$RotatingBanner$hdnBanner" id="cphlUser_RotatingBanner_hdnBanner" value="Home" />\\n    <!-- Large galery -->\\n <section class="gallery"><div class="flexslider-main"><ul id="cphlUser_RotatingBanner_galImages" class="slides"><li><a href=\\\'http://cruiseweb.com/cunard-line-specials/\\\' title=\\\'Cunard 3 for All: 30% Off, Free OBC and Free Tips\\\' target=\\\'_blank\\\'><img src=\\\'http://cruiseweb.com/admin/Images/image-gallery/cun-3forall-banner.jpg\\\' alt=\\\'Cunard 3 for All: 30% Off, Free OBC and Free Tips\\\' draggable=\\\'false\\\'><div class=\\\'poster\\\' style=\\\'background-image: url(http://cruiseweb.com/admin/Images/image-gallery/cun-3forall-banner.jpg);\\\'></div></a></li><li><a href=\\\'http://cruiseweb.com/celebrity-cruises-specials/\\\' title=\\\'Celebrity Cruises with up to 4 FREE Perks*\\\' target=\\\'_blank\\\'><img src=\\\'http://cruiseweb.com/admin/Images/image-gallery/cel-sea-of-savings-banner.jpg\\\' alt=\\\'Celebrity Cruises with up to 4 FREE Perks*\\\' draggable=\\\'false\\\'><div class=\\\'poster\\\' style=\\\'background-image: url(http://cruiseweb.com/admin/Images/image-gallery/cel-sea-of-savings-banner.jpg);\\\'></div></a></li><li><a href=\\\'http://cruiseweb.com/msc-cruises-specials/\\\' title=\\\'MSC Cruises Seaside Sale plus Kids Sail FREE*\\\' target=\\\'_blank\\\'><img src=\\\'http://cruiseweb.com/admin/Images/image-gallery/msc-cruises-seaside-sale-banner.jpg\\\' alt=\\\'MSC Cruises Seaside Sale plus Kids Sail FREE*\\\' draggable=\\\'false\\\'><div class=\\\'poster\\\' style=\\\'background-image: url(http://cruiseweb.com/admin/Images/image-gallery/msc-cruises-seaside-sale-banner.jpg);\\\'></div></a></li></ul><div class="flex-main-nav"></div></div></section></div>\\n\\n\\n    <div class="main-body"><div class="container main-tagline"> <h1 class="tagline-title"> <a href="#" data-target=\\\'/personalquote-modal.htm\\\'  data-toggle="modal" class="modal-iframe">Expert guidance for your cruise vacation!</a></h1></div>\\n        <!-- Content -->\\n        <section class="container main-content bottom-bar"><div id="cphlUser_topthreedeals"> <div class=\\\'span3 deal\\\'><a target=\\\'_blank\\\' href=http://cruiseweb.com/deals/cruise-deals><img class=\\\'lazy\\\' src=\\\'http://cruiseweb.com/admin/images/deal/imageb/dealbimage174.jpg\\\'  alt=\\\'Cruise Deals by Destination!\\\' title=\\\'View Deal\\\'> <div class=\\\'deal-description\\\'><p>Cruise Deals by Destination!</p></div> </a> </div> <div class=\\\'span3 deal\\\'><a target=\\\'_blank\\\' href=http://cruiseweb.com/deals/cruise-deals><img class=\\\'lazy\\\' src=\\\'http://cruiseweb.com/admin/images/deal/imageb/dealbimage175.jpg\\\'  alt=\\\'Cruise Deals by Cruise Line!\\\' title=\\\'View Deal\\\'> <div class=\\\'deal-description\\\'><p>Cruise Deals by Cruise Line!</p></div> </a> </div> <div class=\\\'span3 deal\\\'><a target=\\\'_blank\\\' href=http://cruiseweb.com/deals/cruise-deals-departing><img class=\\\'lazy\\\' src=\\\'http://cruiseweb.com/admin/images/deal/imageb/dealbimage176.jpg\\\'  alt=\\\'Cruise Deals by Departure Port!\\\' title=\\\'View Deal\\\'> <div class=\\\'deal-description\\\'><p>Cruise Deals by Departure Port!</p></div> </a> </div></div>\\n            <!-- 4th column side feature search box -->\\n            <div class="span3 cruise-search"><div id="cruise-search-block"><div class="cruise-search-form">\\n                        <img src="http://cruiseweb.com/img/logo-boat.png" class="boat" alt="Cruise Web">\\n                        <div class="boat-title"><em>Find a</em><span class="hidden-phone"><br />\\n                            &nbsp;</span><strong> Cruise</strong></div>\\n                        <div class="clearfix"></div>\\n                        <div class="input-prepend input-append">\\n                            <button id="side-cruisetype" role="button" class="btn nav-form" data-target=\\\'/modal-cruisetype.aspx\\\' data-toggle="modal">Cruise Type</button>\\n                            <input id="sideCruiseType" type="text" placeholder="Cruise Type" value="Cruise Type" readonly style="display: none" />\\n                            <button id="side-cruisetypedrop" role="button" class="btn large-icon" data-target=\\\'/modal-cruisetype.aspx\\\' data-toggle="modal">\\n                                <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button> </div>\\n                        <br class="visible-phone" />\\n                        <div class="input-prepend input-append">\\n                            <button id="side-cruisedest" role="button" class="btn nav-form" data-target=\\\'/modal-cruisedest.aspx\\\' data-toggle="modal">Cruise Destination</button>\\n                            <input id="sideCruiseDestination" type="text" placeholder="Cruise Destination" value="Cruise Destination" readonly style="display: none"/>\\n                            <button id="side-cruisedestdrop" role="button" class="btn large-icon" data-target=\\\'/modal-cruisedest.aspx\\\' data-toggle="modal">\\n                                <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button> </div>\\n                        <br class="visible-phone" />\\n                        <div class="input-prepend input-append">\\n                            <button id="side-cruisedate" role="button" class="btn nav-form" data-target=\\\'/modal-cruisedate.aspx\\\' data-toggle="modal">Cruise Date</button>\\n                            <input id="sideCruiseDate" type="text" placeholder="Departure Date" value="Departure Date" readonly style="display: none"/>\\n                            <button id="side-cruisedatedrop" role="button" class="btn large-icon" data-target=\\\'/modal-cruisedate.aspx\\\' data-toggle="modal">\\n                                <img src="http://cruiseweb.com/img/icon-droparrow.png" title="Search" /></button></div>\\n                        <div align="center"> <button class="btn btn-blue btn-block" onclick="return GetSessionValues(1);" type="button">Search</button> </div>\\n                        <!--It is updated by samy to remove the default.aspx and index.aspx from the URL so it is removed from the following URL -->\\n                        <p class="small-link pull-right" style="padding: 6px 0 0 0; margin: 0;"><a href=\\\'http://cruiseweb.com/search/\\\'>Advanced Search</a></p>\\n                    </div> </div></div></section>\\n <script>\\n     function ClearSessionValuesOfQuickSearch() {\\n         document.getElementById("hdMasterType").value = "";\\n         document.getElementById("hdMasterLines").value = "";\\n         document.getElementById("hdMasterDestination").value = "";\\n         document.getElementById("hdMasterDateRange").value = "";\\n         document.getElementById("hdMasterDateRangeCriteria").value = "";\\n         document.getElementById("hdMasterDealDateRange").value = "";\\n         var clearURL = \\\'/\\\' + "ClearSessionValues.ashx?t=" + Math.random() + "&mode=9";\\n         $.ajax({\\n             type: \\\'POST\\\',\\n             headers: { "cache-control": "no-cache" },\\n             url: clearURL\\n         });\\n         return false;\\n     }\\n </script>\\n\\n            <!-- Map -->\\n\\n  \\n            <!-- 3-item spotlight -->\\n            <!-- Content -->\\n\\n            <section class="container main-content arrow-box-up">\\n\\n\\n\\n <select name="Gender" style="width: 100%;" class="ng-pristine ng-valid ng-touched" form="carform">\\n   <option value="9" selected="selected">Gender</option>\\n   <option value="F">Female</option>\\n   <option value="M">Male</option>\\n</select> \\n<select name="Class" style="width: 100%;" class="ng-pristine ng-valid ng-touched"  form="carform">\\n    <option value="9" selected="selected">Class</option>\\n    <option value="First">First Class</option>\\n    <option value="Second">Second Class</option>\\n    <option value="Third">Third Class</option>\\n</select>\\n <select name="Port" style="width: 100%;" class="ng-pristine ng-valid ng-touched" form="carform">\\n    <option value="9" selected="selected">Port</option>\\n    <option value="C">Cherbourg</option>\\n    <option value="Q">Queenstown</option>\\n    <option value="S">Southampton</option>\\n</select>\\n<form action="\', escape=False)\nresponse.write(URL(\'search\'))\nresponse.write(\'" id="carform">\\n  <input type="submit">\\n</form>\\n\\n                           \\n             <div class="row-fluid  ng-scope" ng-repeat="search in searchResults track by search.ItineraryId" after-last-item="afterlastItem">\\n                        <div class="row-fluid">\\n                            <!-- First column pic ng-if="search.DealDateHTML!=\\\'\\\'"-->\\n                            <div class="span4 photo">\\n                                <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america">\\n                                    <img class="lazy" ng-src="\', escape=False)\nresponse.write(URL(\'static\',\'http://cruiseweb.com/admin/images/ships/image172.jpg\'))\nresponse.write(\'" title="Pride of America" alt="Pride of America" src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/image172.jpg"></a>\\n                            </div>\\n                            <!-- Second column details and dates -->\\n                            <div class="span6 details">\\n                                <div class="logo" align="center">\\n                                    <div class="center-logo">\\n                                        <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line">\\n                                            <img ng-src="\', escape=False)\nresponse.write(URL(\'static\',\'http://cruiseweb.com/admin/images/vendor/image5logo.jpg\'))\nresponse.write(\'" id="imgLogo" class="logoposition" tooltip="Norwegian Cruise Line" alternatetext="Norwegian Cruise Line" src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/image5logo.jpg">\\n                                        </a>\\n                                    </div>\\n                           \\n                                </div>\\n                                <div class="title">\\n                                    <h3 class="color-blue"><a id="lnkItinerary1" ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii"><strong><span id="lblItineraryName" ng-bind="search.Planname" class="ng-binding">7 NIGHT HAWAII CRUISE</span></strong></a></h3>\\n                                </div>\\n                                <div class="clearfix"></div>\\n\\n                                <div class="icon"><i class="icon-globe"></i></div>\\n                                <div class="ship">\\n                                    <p class="small-text">\\n                                        <strong>Ship</strong>: \\n                                            <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america" tooltip="Pride of America" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america">\\n                                                <span ng-bind="search.ShipName" class="ng-binding">Pride of America</span>\\n                                            </a>\\n                                    </p>\\n                                </div>\\n                                <div class="icon"><i class="icon-flag"></i></div>\\n                                <div class="ship">\\n                                    <p class="small-text">\\n                                        <strong>Departing from</strong>: \\n                               <a ng-href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii" href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii"><span ng-bind="search.DepartingFrom" tooltip="Honolulu, Oahu, Hawaii" class="ng-binding">Honolulu, Oahu, Hawaii</span></a>\\n                                    </p>\\n                                </div>\\n                                <div class="clearfix"></div>\\n                                <div class="icon"><i class="icon-map-marker"></i></div>\\n                                <div class="places">\\n                                    <p class="small-text">\\n                                        <strong>Ports of call</strong>: \\n                               <span ng-bind-html="search.PortOfCall | sanitize" class="ng-binding"><a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii">Honolulu, Oahu, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-kahului-maui-hawaii">Kahului, Maui, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-hilo-hawaii">Hilo, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-kona-hawaii">Kona, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-nawiliwili-kauai">Nawiliwili, Kauai</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii">Honolulu, Oahu, Hawaii</a>;</span>\\n                                    </p>\\n                                </div>\\n                                <div class="clearfix"></div>\\n\\n                                <!-- Slider buttons -->\\n\\n\\n                                <div class="clearfix"></div>\\n                                <div>\\n                                    <deal-tagline para="search" ng-bind-html="search.DealTagLine | sanitize" class="ng-binding ng-isolate-scope"><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Cruise+Line%3a+Choose+Your+FREE+Perks*" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Cruise Line: Choose Your FREE Perks*</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Hawaii+Deal%3a+Choose+Your+FREE+Offer*" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Hawaii Deal: Choose Your FREE Offer*</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Cruise+Line%3a+up+to+%2450+Onboard+Credit*" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Cruise Line: up to $50 Onboard Credit*</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Go+Freestyle+with+Norwegian+Cruise+Line" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Go Freestyle with Norwegian Cruise Line</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Hawaii+Cruisetour+Packages" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Hawaii Cruisetour Packages</a></div></deal-tagline>\\n                                </div>\\n                                <div class="clearfix"></div>\\n                            </div>\\n                            <!-- Third column price -->\\n                            <div class="span2 price">\\n                                <div class="favoriteI" align="center">\\n                                    <mark-favorite para="search" data-path="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" data-currentuserstatus="false" class="ng-isolate-scope"><a href="#" data-toggle="tooltip" rel="tooltip" title="" data-original-title="Mark Favorite" class="ng-scope"><span class="imark-fave"><img src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/icon-heart-empty.png">Mark as Favorite</span></a></mark-favorite>\\n                                </div>\\n                                <div id="cphlUser_PriceDiv" class="ribbon">\\n                                    <a href="#">\\n                                        <img ng-src="http://cruiseweb.com//img/ribbon-deal.png" alt="Deal" title="Deal" draggable="false" src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/ribbon-deal.png"></a>\\n                                </div>\\n\\n                                <br>\\n                                <p class="small-text color-ocean"><strong>Published prices from</strong></p>\\n                                <div class="cost-digits">\\n                                    <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii/2017-12-09#cruise-itinerary" ng-switch="" on="currentTabType" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii/2017-12-09#cruise-itinerary">\\n                                        <!-- ngSwitchWhen: 1 --><!-- ngIf: search.insidePrice==\\\'0.0000\\\' --><!-- end ngSwitchWhen: -->\\n                                        <!-- ngSwitchWhen: 1 --><!-- ngIf: search.insidePrice!=\\\'0.0000\\\' --><span ng-switch-when="1" ng-bind="search.insidePrice | currency:\\\'$\\\':0" ng-if="search.insidePrice!=\\\'0.0000\\\'" class="ng-binding ng-scope">$1,379</span><!-- end ngIf: search.insidePrice!=\\\'0.0000\\\' --><!-- end ngSwitchWhen: -->\\n                                        <!-- ngSwitchWhen: 2 -->\\n                                        <!-- ngSwitchWhen: 2 -->\\n                                        <!-- ngSwitchWhen: 3 -->\\n                                        <!-- ngSwitchWhen: 3 -->\\n                                        <!-- ngSwitchWhen: 4 -->\\n                                        <!-- ngSwitchWhen: 4 -->\\n                                    </a>\\n                                </div>\\n                                <p class="tiny-text" ng-switch="" on="currentTabType">\\n                                    <!-- ngSwitchWhen: 1 --><span ng-switch-when="1" class="ng-scope">Based on Lowest prices</span><!-- end ngSwitchWhen: -->\\n                                    <!-- ngSwitchWhen: 2 -->\\n                                    <!-- ngSwitchWhen: 3 -->\\n                                    <!-- ngSwitchWhen: 4 -->\\n                                </p>\\n\\n                                <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" class="btn btn-orange btn-block" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii"><strong>Details</strong></a>\\n\\n                            </div>\\n                            <div class="clearfix"></div>\\n\\n                            <!-- Item page indicator -->\\n                            <div class="qty-divider">\\n                                <hr>\\n                                <div class="number">\\n                                    <h3><strong>\\n                                        <span id="lblPageNumber" class="ng-binding">1</span>\\n                                    </strong></h3>\\n                                </div>\\n                            </div>\\n\\n                        </div>\\n                    </div\\n    \\n            </section>\\n        </div>\\n        <!-- Begin ginormous footer region -->\\n        <section id="planning">\\n            <div class="container">\\n                <div align="center" class="inline-lg-title">Let Us Help Plan Your Dream Vacation</div>\\n                <div class="row-fluid">\\n                    <div class="span6">\\n                        <h3><strong>Our Cruise Consultants<br class="visible-phone" />\\n                            Make It Easy</strong></h3>\\n                        <p>With a world of choices, we understand you may need some personal assistance to plan your perfect vacation. From finding the perfect destination to making sure everything is just right, we\\\'re here to help. Plus, our consultants know all the latest Specials & Promotions.</p>\\n                        <p>Call us today and sleep easier tonight, knowing your dream vacation is just a cruise away.</p>\\n                    </div>\\n                    <div class="span6 phone">\\n                        <div class="planning-cta">\\n                            <div class="free-planning-title" align="center"><strong>Free Cruise Planning</strong></div>\\n                            <div class="digits" align="center"><a href="tel:18003779383">1.800.377.9383</a></div>\\n                            <div class="free-planning-subtitle" align="center">QUICK. FREE. EASY.</div>\\n                            <br />\\n                            <div align="center" class="button">\\n                                <a href="#" data-target=\\\'http://cruiseweb.com/personalquote-modal.htm\\\'\\n                                    data-toggle="modal" class="btn btn-orange modal-iframe"><strong>Personal Quote</strong></a>\\n                            </div> </div></div></div> </div> </section> <br /> <br />\\n        <!-- Footer links -->\\n        <section id="footernav">\\n            <div class="container">\\n                <div class="row-fluid">\\n                    <!-- Navigation -->\\n                    <div class="span8 footer-links">\\n                        <div class="row-fluid">\\n                            <div class="span3">\\n                                <!--Index.aspx is removed by samy from this url for not showing it in the url-->\\n                                <h3><strong><a href=\\\'http://cruiseweb.com/search/\\\'>Find a Cruise</a></strong></h3>\\n                                <ul>\\n                                    <li><a href=\\\'http://cruiseweb.com/cruise-lines/\\\'>All Cruise Types</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/popular-cruise-lines/\\\'>Popular Cruises</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/luxury-cruise-lines/\\\'>Luxury Cruises</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/river-cruise-lines/\\\'>River Cruises</a></li>\\n                                </ul>\\n                            </div>\\n                            <div class="span3">\\n                                <h3><strong><a href=\\\'http://cruiseweb.com/deals/\\\'>Deals</a></strong></h3>\\n                                <ul id="footerDeals"><li ><a href=http://cruiseweb.com/deals/featured-cruise-deals>Featured Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals>Deals by Destination  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals>Deals by Cruise Line  </a></li><li ><a href=http://cruiseweb.com/deals/cruise-deals-departing>Deals by Departure Port  </a></li><li ><a href=http://cruiseweb.com/deals/last-minute-cruise-deals>Last Minute Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/holiday-cruise-deals>Holiday Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/military-cruise-deals>Military Cruise Deals  </a></li><li ><a href=http://cruiseweb.com/deals/family-cruise-deals>Family Cruise Deals  </a></li><li><a href=http://cruiseweb.com/deals/featured-cruise-deals>More...</a></li></ul>\\n                            </div>\\n                            <div class="span3">\\n                                <h3><strong><a href=\\\'http://cruiseweb.com/destinations/\\\'>Destinations &amp; Ports</a></strong></h3>\\n                                <ul id="footerDest"><li ><a href=http://cruiseweb.com/destinations/cruise-alaska>Alaska  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-asia>Asia  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-bahamas>Bahamas  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-bermuda>Bermuda  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-caribbean>Caribbean  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-hawaii>Hawaii  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-mediterranean>Mediterranean  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-northern-europe>Northern Europe  </a></li><li ><a href=http://cruiseweb.com/destinations/cruise-panama-canal>Panama Canal  </a></li><li><a  href=http://cruiseweb.com/destinations/>All Destinations</a></li><li><a href=http://cruiseweb.com/ports/>All Ports</a></li></ul>\\n                            </div>\\n                            <div class="span3">\\n                                <h3><strong><a href=\\\'http://cruiseweb.com/cruise-lines/\\\'>Cruise Lines</a></strong></h3>\\n                                <ul>\\n                                    <li><a href=\\\'http://cruiseweb.com/popular-cruise-lines/\\\'>Popular Lines</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/luxury-cruise-lines/\\\'>Luxury Lines</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/river-cruise-lines/\\\'>River Lines</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/cruise-lines/\\\'>All Lines</a></li>\\n                                </ul>\\n                            </div>\\n                        </div>\\n                        <div class="row-fluid">\\n                            <div class="span3">\\n                                <h3>\\n                                    <strong><a href=\\\'http://cruiseweb.com/all-about-cruising/\\\'>All About Cruising</a></strong></h3>\\n                                <ul>\\n                                    <li><a href=\\\'http://cruiseweb.com/cruising-101/\\\'>Cruising 101</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/specialty-cruises/\\\'>Specialty Cruises</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/news-media/\\\'>News &amp; Media</a></li>\\n                                </ul>\\n                            </div>\\n                            <div class="span3">\\n                                <h3>\\n                                    <strong><a href=\\\'http://cruiseweb.com/already-booked/\\\'>Already Booked</a></strong></h3>\\n                                <ul>\\n                                    <li><a href=\\\'http://cruiseweb.com/already-booked/\\\'>Pre-registration</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/passports-visas/\\\'>Passports &amp; Visas</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/already-booked/\\\'>Tickets</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/travel-protection/\\\'>Travel Protection</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/shore-excursions/\\\'>Shore Excursions</a></li>\\n                                </ul>\\n                            </div>\\n                            <div class="span3">\\n                                <h3>\\n                                    <strong><a href=\\\'http://cruiseweb.com/why-cruise-web/\\\'>Why Cruise Web</a></strong></h3>\\n                                <ul>\\n                                    <li><a href=\\\'http://cruiseweb.com/our-approach/\\\'>Our Approach</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/low-price-guarantee/\\\'>Low Price Guarantee</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/careers/\\\'>Careers</a></li>\\n                                </ul>\\n                            </div>\\n                            <div class="span3">\\n                                <h3>\\n                                    <strong><a href=\\\'http://cruiseweb.com/need-help/\\\'>Need Help</a></strong></h3>\\n                                <ul>\\n                                    <!--It is commented and added new tag by samy to link to personal quote page-->\\n                                    \\n                                    <li>\\n                                        <a href="#" data-target=\\\'http://cruiseweb.com/personalquote-modal.htm\\\'\\n                                            data-toggle="modal" class="modal-iframe">Free Consultation</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/customer-service/\\\'>Customer Service</a></li>\\n                                    <li><a href=\\\'http://cruiseweb.com/contact-us/\\\'>Contact Us</a></li>\\n                                </ul>  </div>  </div>  </div>\\n                    <!-- Social Media -->\\n                    <div class="span4 footer-social">\\n                        <div class="connect-title">\\n                            <strong>Connect With Us</strong><img src=\\\'http://cruiseweb.com/img/social/icon-social.png\\\' alt="Social"\\n                                title="Social" class="title-icon">\\n                        </div>\\n                        <p>\\n                            <a href="https://www.facebook.com/TheCruiseWeb" target="_blank">\\n                                <img src=\\\'http://cruiseweb.com/img/social/icon-facebook.png\\\' alt="Facebook" title="Facebook"></a><a\\n                                    href="https://twitter.com/TheCruiseWeb/" target="_blank"><img src=\\\'http://cruiseweb.com/img/social/icon-twitter.png\\\'\\n                                        alt="Twitter" title="Twitter"></a><a href="http://www.pinterest.com/thecruiseweb/"\\n                                            target="_blank"><img src=\\\'http://cruiseweb.com/img/social/icon-pintrest.png\\\' alt="Pintrest" title="Pintrest"></a><a\\n                                                href="https://plus.google.com/112592783437466041024/posts" target="_blank"><img src=\\\'http://cruiseweb.com/img/social/icon-google.png\\\'\\n                                                    alt="Google" title="Google"></a><a href="http://www.youtube.com/user/TheCruiseWeb"\\n                                                        target="_blank"><img src=\\\'http://cruiseweb.com/img/social/icon-youtube.png\\\' alt="YouTube" title="YouTube"></a>\\n                        </p>\\n\\n                        <div id="mainbody-cms-200" class="cms-editable">\\n                            <p>\\n                                Be sure to visit our other media outlets and stay connected with deals and other\\n                    news for cruises.\\n                            </p>\\n                        </div>\\n<div class="clearfix">\\n                        <ul>\\n                            <li><a target="_blank" href="http://cruiseweb.com/blog/"><i class="icon-share"></i> Blog</a></li>\\n                            <li><a href=\\\'http://cruiseweb.com/newsletter/\\\'><i class="icon-share"></i> e-Newsletter</a></li>\\n                        </ul>\\n                        <ul>\\n\\n                            <li><a target="_blank" href=\\\'http://cruiseweb.com/testimonials/\\\'><i class="icon-share"></i> Testimonials</a></li>\\n                        </ul>\\n\\t\\t\\t\\t\\t\\t</div>\\n           <div class="clearfix pb5"> <a href="#" data-target=\\\'/modal-emaildeals.htm\\\' data-toggle="modal" class="btn btn-orange modal-iframe btn-email-block"><strong>Email Deals</strong></a>\\n                        </div>\\n                    </div>\\n\\n                </div>\\n            </div>\\n        </section>\\n        <!-- Footer -->\\n        <footer>\\n            <section class="container">\\n                <div class="row-fluid">\\n                    <div align="center" class="span4 offset4">\\n\\t\\t\\t\\t\\t <a href=\\\'http://cruiseweb.com/\\\'>\\n                        <img src=\\\'http://cruiseweb.com/img/logo-white.png\\\' alt="Cruise Web" title="Cruise Web" style="max-height: 70px;" /></a>\\n                    </div>\\n                </div>\\n                <div class="row-fluid">\\n                    <div class="span6 offset3">\\n                        <h3><strong>The Cruise Web, Inc.</strong></h3>\\n                        <p align="center">\\n                            3901 Calverton Boulevard, Suite 350, Calverton, MD 20705<br />\\n                              Phone: <a href="tel:18003779383">1.800.377.9383</a>  &nbsp; &nbsp;International: <a href="tel:0012404870155">001.240.487.0155</a>  &nbsp; &nbsp; Fax: 1.240.487.0154<br />\\n                        </p>\\n                        <div align="center">\\n                            <iframe style="border: none; padding: 0; margin: 0; background-color: #092367 !important;" name="frmSearch" src=\\\'http://cruiseweb.com/internalsearch.aspx\\\' id="frmSearch" width="200" height="32"></iframe>\\n                        </div>\\n                        <p align="center">\\n                            <a href=\\\'http://cruiseweb.com/terms-conditions/\\\'>Terms &amp; Conditions</a>&nbsp; &nbsp; &nbsp; &nbsp; <a href=\\\'http://cruiseweb.com/privacypolicy/\\\'>Privacy Policy</a>&nbsp; &nbsp; &nbsp; &nbsp; <a href=\\\'http://cruiseweb.com/site-map/\\\'>Site Map</a><br />\\n                            Copyright \\xc2\\xa9 2017                        \\n                        </p>\\n                        <div align="center">\\n                            <a href="#" target="_blank">\\n                                <img src=\\\'http://cruiseweb.com/img/icon-clea.png\\\' alt="CLEA" title="CLEA" /></a> <a href="#" target="_blank">\\n                                    <img src=\\\'http://cruiseweb.com/img/icon-bbb.png\\\' alt="Better Business Bureau" title="Better Business Bureau" /></a>\\n                        </div>\\n                    </div>\\n                </div>\\n                <br />\\n                <br />\\n            </section>\\n        </footer>\\n        \\n        <div id="alertSuccessModal" class="modal hide fade" aria-hidden="true">\\n            <div class="msgalert alert-success">\\n                <a class="close" data-dismiss="modal" href="#">X</a>\\n                <h4 id="successHead"></h4>\\n                <span id="spSuccessMsg"></span>\\n            </div>\\n        </div>\\n        <div id="alertInfoModal" class="modal hide fade" aria-hidden="true">\\n            <div class="msgalert alert-warn">\\n                <a class="close" data-dismiss="modal" href="#">X</a>\\n                <h4 id="infoHead"></h4>\\n                <span id="spInfoMsg"></span>\\n            </div>\\n        </div>\\n        <div id="alertErrModal" class="modal hide fade" aria-hidden="true">\\n            <div class="msgalert alert-error">\\n                <a class="close" data-dismiss="modal" href="#">X</a>\\n                <h4 id="errHead"></h4>\\n                <span id="spErrMsg"></span>\\n            </div>\\n        </div>\\n        <div id="alertWarningModal" class="modal hide fade" aria-hidden="true">\\n            <div class="msgalert alert-warn">\\n                <a class="close" data-dismiss="modal" href="#">X</a>\\n                <h4 id="warningHead"></h4>\\n                <span id="spWarningMsg"></span>\\n                <a href="#" onclick="javascript:showUsernamemodal(2)">\\n                    <i class="icon-heart"></i>\\n                    <br class="visible-phone" />\\n                    Login <span class="hidden-tablet">to\\n                                    <br class="visible-phone" />\\n                        My Cruise Web</span>\\n                    <i class="icon-heart"></i>\\n                </a>\\n            </div>\\n        </div>\\n        <div id="Panel1" style="position: relative;">\\n            <div id="report-loading" class="divModalBackground">\\n                <img src="#" /><br />\\n                <strong>Loading</strong>\\n            </div>     \\n        </div>\\n        <script type="text/javascript">\\n            if (!!(\\\'ontouchstart\\\' in window)) {//check for touch device\\n                $("a#navFindCruise").removeAttr("href");\\n                $(".navigationURL").removeAttr("href");\\n               $("a#navFindCruise").removeAttr("data-hover");\\n                $("a#navFindCruise").click(function (e) {\\n                    $.unblockUI();\\n                    $(\\\'.menu-destports\\\').hide();\\n                    $(\\\'.menu-cruiselines\\\').hide();\\n                    $(\\\'.menu-about\\\').hide();\\n                    $(".menu-contact").hide();\\n                    $(\\\'.menu-deals\\\').hide();\\n                    $(\\\'.menu-search\\\').toggle();\\n                    return false;\\n                });\\n                $(\\\'a#navDeals\\\').click(function (event) {\\n                    $(\\\'.menu-destports\\\').hide();\\n                    $(\\\'.menu-cruiselines\\\').hide();\\n                    $(\\\'.menu-about\\\').hide();\\n                    $(\\\'.menu-search\\\').hide();\\n                    $(".menu-contact").hide();\\n                    $(\\\'.menu-deals\\\').toggle();\\n                });\\n                $(\\\'a#navDestPorts\\\').click(function (event) {\\n                    $(\\\'.menu-deals\\\').hide();\\n                    $(\\\'.menu-cruiselines\\\').hide();\\n                    $(\\\'.menu-about\\\').hide();\\n                    $(\\\'.menu-search\\\').hide();\\n                    $(".menu-contact").hide();\\n                    $(\\\'.menu-destports\\\').toggle();\\n                });\\n                $(\\\'a#navCruiseLines\\\').click(function (event) {\\n                    $(\\\'.menu-destports\\\').hide();\\n                    $(\\\'.menu-deals\\\').hide();\\n                    $(\\\'.menu-about\\\').hide();\\n                   $(\\\'.menu-search\\\').hide();\\n                   $(".menu-contact").hide();\\n                   $(\\\'.menu-cruiselines\\\').toggle();\\n                });\\n                $(\\\'a#navAbout\\\').click(function (event) {\\n                    $(\\\'.menu-cruiselines\\\').hide();\\n                    $(\\\'.menu-destports\\\').hide();\\n                    $(\\\'.menu-deals\\\').hide();\\n                    $(\\\'.menu-search\\\').hide();\\n                    $(".menu-contact").hide();\\n                    $(\\\'.menu-about\\\').toggle();\\n                });\\n                $("a#navContact").click(function (event) {\\n                    $(\\\'.menu-about\\\').hide();\\n                    $(\\\'.menu-cruiselines\\\').hide();\\n                    $(\\\'.menu-destports\\\').hide();\\n                    $(\\\'.menu-deals\\\').hide();\\n                    $(\\\'.menu-search\\\').hide();\\n                    $(".menu-contact").toggle();\\n                });\\n            }\\n            $("#btnEmailDeals").click(function (e) {\\n                $(\\\'html, body\\\').animate({\\n                    scrollTop: $("#txtFirstName").offset().top\\n                }, 2000);\\n                $("#txtFirstName").focus();\\n            });\\n            //To close share box\\n            $(\\\'#at3winheader\\\').on(\\\'click\\\', \\\'a#at3winheaderclose\\\', function () {\\n                // $("a#at3winheaderclose").live(\\\'click\\\', function () {\\n                $("#at3win").css("display", "none");\\n            });\\n            function init() {\\n                var objdiv = document.getElementById("Panel1")\\n                if (objdiv) {\\n                    objdiv.style.visibility = \\\'hidden\\\';\\n                }\\n            }\\n\\n            init();\\n            function showAlert(title, message, flag) {\\n                switch (flag) {\\n                    case 1://Success\\n                        $(\\\'#alertSuccessModal\\\').modal({\\n                            keyboard: true,\\n                            show: false,\\n                        }).on(\\\'show\\\', function () {\\n                        });\\n                        $(\\\'#alertSuccessModal\\\').modal(\\\'show\\\');\\n                        $(\\\'#successHead\\\').text(title);\\n                        $(\\\'#spSuccessMsg\\\').text(message);\\n                        break;\\n                    case 2://Info\\n                        $(\\\'#alertInfoModal\\\').modal({\\n                            keyboard: true,\\n                            show: false,\\n                        }).on(\\\'show\\\', function () {\\n                        });\\n                        $(\\\'#alertInfoModal\\\').modal(\\\'show\\\');\\n                        $(\\\'#infoHead\\\').text(title);\\n                        $(\\\'#spInfoMsg\\\').text(message);\\n                        break;\\n                    case 3://Error\\n                        $(\\\'#alertErrModal\\\').modal({\\n                            keyboard: true,\\n                            show: false,\\n                        }).on(\\\'show\\\', function () {\\n                        });\\n                        $(\\\'#alertErrModal\\\').modal(\\\'show\\\');\\n                        $(\\\'#errHead\\\').text(title);\\n                        $(\\\'#spErrMsg\\\').text(message);\\n                        break;\\n                    case 4://Warning\\n                        $(\\\'#alertWarningModal\\\').modal({\\n                            keyboard: true,\\n                            show: false,\\n                        }).on(\\\'show\\\', function () {\\n                        });\\n                        $(\\\'#alertWarningModal\\\').modal(\\\'show\\\');\\n                        $(\\\'#warningHead\\\').text(title);\\n                        $(\\\'#spWarningMsg\\\').text(message);\\n                        break;\\n                    default:\\n                        break;\\n                }\\n            }\\n        </script>\\n        <!-- Analytics -->\\n        <script type="text/javascript">\\n            (function (i, s, o, g, r, a, m) {\\n                i[\\\'GoogleAnalyticsObject\\\'] = r; i[r] = i[r] || function () {\\n                    (i[r].q = i[r].q || []).push(arguments)\\n                }, i[r].l = 1 * new Date(); a = s.createElement(o),\\n                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)\\n            })(window, document, \\\'script\\\', \\\'http://www.google-analytics.com/analytics.js\\\', \\\'ga\\\');\\n            ga(\\\'create\\\', \\\'UA-3016301-2\\\', \\\'cruiseweb.com\\\');\\n            ga(\\\'send\\\', \\\'pageview\\\');\\n        </script>\\n    \\n\\n<script type="text/javascript">\\n//<![CDATA[\\njavascript:ClearSessionValuesOfQuickSearch();//]]>\\n</script>\\n</form>\\n    <!-- What is this? -->\\n    <!-- \\n    <div>\\n        <img src="images/googleBG.PNG" />\\n    </div>\\n    -->\\n    <!-- -->\\n    \\n    <div id="registerModal" class="modal hide fade" aria-hidden="true">\\n        <div class="modal-header">\\n            <div class="clearfix">\\n                <div class="looks-like-h1 pull-left"><strong><span id="spHead"></span></strong></div>\\n                <div class="visible-phone clearfix"></div>\\n                <button class="btn pull-right" data-dismiss="modal">&times;</button>\\n            </div>\\n        </div>\\n        <div class="modal-body">\\n            <form id="frm1" method="post">\\n                <div class="row-fluid">\\n                    <label class="pull-left control-label">Your Email Address</label>\\n                    <input id="txtRegisterUserName" name="RegisterUserName" maxlength="50" required class="span" type="email" placeholder="Email" />\\n                    <button id="btnRegister" name="register" class="btn btn-blue pull-right" type="submit">Submit</button>\\n                    <button class="btn update modal-reset pull-right" onclick="javascript:$(\\\'#txtRegisterUserName\\\').focus();" type="reset">Reset</button>\\n                </div>\\n            </form>\\n        </div>\\n        <div class="modal-footer">\\n        </div>\\n    </div>\\n    <script type="text/javascript">\\n\\n        var spinnerWhite = "<div class=\\\'loading-spinner mod-main fade\\\'><h3>Loading</h3></div>";\\n        function showUsernamemodal(flag) {\\n            $("body").modalmanager({ spinner: spinnerWhite });\\n            $("body").modalmanager("loading");\\n            setTimeout(function () {\\n                if (flag == "1") {\\n                    $("#spHead").text("Register");\\n                } else { $("#spHead").text("Login"); }\\n                $(\\\'#registerModal\\\').modal(\\\'show\\\');\\n            }, 1000);\\n        }\\n        function ClearSessionValues() {\\n            document.getElementById("hdMasterType").value = "";\\n            document.getElementById("hdMasterLines").value = "";\\n            document.getElementById("hdMasterDestination").value = "";\\n            document.getElementById("hdMasterDateRange").value = "";\\n            document.getElementById("hdMasterDateRangeCriteria").value = "";\\n            document.getElementById("hdMasterDealDateRange").value = "";\\n\\n            var clearURL = \\\'/\\\' + "ClearSessionValues.ashx?t=" + Math.random() + "&mode=3";\\n            $.ajax({\\n                type: \\\'POST\\\',\\n                headers: { "cache-control": "no-cache" },\\n\\t\\t\\t\\tcontentType:"application/json; charset=utf-8",\\n                url: clearURL\\n            });\\n        }\\n        function GetSessionValues(flag) {\\n            showBlockPanel();\\n            var JType;\\n            if (document.getElementById("hdMasterType").value != null) {\\n                JType = document.getElementById("hdMasterType").value;\\n            }\\n\\n            var JLines;\\n            if (document.getElementById("hdMasterLines").value != null) {\\n                JLines = document.getElementById("hdMasterLines").value;\\n            }\\n            if (JType.indexOf("all")>=0) {//To  remove all value from url when select all option is selected\\n\\n                JLines = "";\\n                JType = "";\\n            }\\n            var JDestination;\\n            if (document.getElementById("hdMasterDestination").value != null) {\\n                JDestination = document.getElementById("hdMasterDestination").value;\\n            }\\n            if (JDestination.indexOf("all")>=0) {//To remove all value from url when select all option is selected\\n                JDestination = "";\\n            }\\n            var JDateRange;\\n            if (document.getElementById("hdMasterDateRangeCriteria").value != null) {\\n                JDateRange = document.getElementById("hdMasterDateRangeCriteria").value;\\n            }\\n            var JDateRangeCriteria;\\n            if (document.getElementById("hdMasterDateRange").value != null) {\\n                JDateRangeCriteria = document.getElementById("hdMasterDateRange").value;\\n            }\\n            var JDealDateRange;\\n            if (document.getElementById("hdMasterDealDateRange").value != null) {\\n                JDealDateRange = document.getElementById("hdMasterDealDateRange").value;\\n            }\\n            var stringLenght = (JType + JLines + JDestination + JDateRange + JDateRangeCriteria + JDealDateRange).length;\\n            var op = document.getElementById("hdCount").value\\n            var All = "";\\n            if (stringLenght <= op) {\\n                //Index.aspx is removed by samy from this url for not showing it in the url\\n                if (stringLenght == 0) {\\n                    All = "All";\\n                    window.location.href = \\\'/search/\\\' + "?values=" + JType + ":" + JLines + ":" + JDestination + ":" + JDateRangeCriteria + ":" + JDateRange + ":" + JDealDateRange + ":" + All;\\n                }\\n                else {\\n                    All = "CruiseSearch";\\n                    window.location.href = \\\'/search/\\\' + "?values=" + JType + ":" + JLines + ":" + JDestination + ":" + JDateRangeCriteria + ":" + JDateRange + ":" + JDealDateRange + ":" + All;\\n                }\\n                return false;\\n            }\\n            else {\\n                alert(\\\'Max Character Exceeds\\\');\\n                return true;\\n            }\\n            hideBlockPanel();\\n        }\\n    </script>\\n    <script type="text/javascript">\\n        function SendValueToSessionDestination(destName) {\\n            $.ajaxSetup({cache: false});\\n            var sessionURL = \\\'/\\\' + "SendValuesToSession.ashx?t=" + Math.random() + "&destName=" + encodeURI(destName);\\n            $.ajax({\\n                type: \\\'POST\\\',\\n                headers: { "cache-control": "no-cache" },\\n\\t\\t\\t\\tcontentType:"application/json; charset=utf-8",\\n                url: sessionURL,\\n                cache: false\\n            });\\n        }\\n        //to scroll to top of the page            \\n        $(window).scroll(function () {\\n            if ($(this).scrollTop() != 0) {\\n                $(\\\'#backtotop\\\').fadeIn();\\n            } else {\\n                $(\\\'#backtotop\\\').fadeOut();\\n            }\\n        });\\n        $(\\\'#backtotop\\\').click(function () {\\n            $(\\\'body,html\\\').animate({ scrollTop: 0 }, 800);\\n        });\\n        $body = $("body");\\n        $(document).ajaxStop($.unblockUI);\\n        //Index.aspx is removed by samy from this url for not showing it in the url\\n        $(\\\'a[href=\\\\\\\'/search/\\\\\\\']\\\').click(function () { showBlockPanel(); });\\n\\n    </script>\\n    <div class="modaltemp"></div>\\n    <div id="domMessage" class="modaltemp">\\n    </div>\\n\\t<script type="text/javascript">\\npiAId = \\\'305141\\\';\\npiCId = \\\'1289\\\';\\n\\n(function() {\\n\\tfunction async_load(){\\n\\t\\tvar s = document.createElement(\\\'script\\\'); s.type = \\\'text/javascript\\\';\\n\\t\\ts.src = (\\\'https:\\\' == document.location.protocol ? \\\'https://pi\\\' : \\\'http://cdn\\\') + \\\'.pardot.com/pd.js\\\';\\n\\t\\tvar c = document.getElementsByTagName(\\\'script\\\')[0]; c.parentNode.insertBefore(s, c);\\n\\t}\\n\\tif(window.attachEvent) { window.attachEvent(\\\'onload\\\', async_load); }\\n\\telse { window.addEventListener(\\\'load\\\', async_load, false); }\\n})();\\n</script>\\n</body>\\n\\n<!-- Mirrored from cruiseweb.com/ by HTTrack Website Copier/3.x [XR&CO\\\'2014], Mon, 08 May 2017 12:21:40 GMT -->\\n</html>\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'pymysql.err'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of InternalError object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of InternalError object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of InternalError object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of InternalError object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'__init__'
+p26
+S"<method-wrapper '__init__' of InternalError object>"
+p27
+sS'__setattr__'
+p28
+S"<method-wrapper '__setattr__' of InternalError object>"
+p29
+sS'__reduce_ex__'
+p30
+S'<built-in method __reduce_ex__ of InternalError object>'
+p31
+sS'__new__'
+p32
+S'<built-in method __new__ of type object>'
+p33
+sS'__format__'
+p34
+S'<built-in method __format__ of InternalError object>'
+p35
+sS'__class__'
+p36
+S"<class 'pymysql.err.InternalError'>"
+p37
+sS'__doc__'
+p38
+S"'Exception raised when the database encounters an...anymore, the transaction is\\n    out of sync, etc.'"
+p39
+sS'__getitem__'
+p40
+S"<method-wrapper '__getitem__' of InternalError object>"
+p41
+sS'__setstate__'
+p42
+S'<built-in method __setstate__ of InternalError object>'
+p43
+sS'__getattribute__'
+p44
+S"<method-wrapper '__getattribute__' of InternalError object>"
+p45
+sS'args'
+p46
+S'(1054, u"Unknown column \'a\' in \'where clause\'")'
+p47
+sS'__subclasshook__'
+p48
+S'<built-in method __subclasshook__ of type object>'
+p49
+sS'__unicode__'
+p50
+S'<built-in method __unicode__ of InternalError object>'
+p51
+sS'__delattr__'
+p52
+S"<method-wrapper '__delattr__' of InternalError object>"
+p53
+sS'__repr__'
+p54
+S"<method-wrapper '__repr__' of InternalError object>"
+p55
+sS'__hash__'
+p56
+S"<method-wrapper '__hash__' of InternalError object>"
+p57
+ssS'evalue'
+p58
+S'(1054, u"Unknown column \'a\' in \'where clause\'")'
+p59
+sS'request'
+p60
+cgluon.html
+XML_unpickle
+p61
+(S's7i\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>Cruisership</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-731373d4-3bfd-4c8a-a9a4-facf6260038e<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_cruisership</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-21f3d20e-b5ae-4cd1-8368-8c4cac0fd4c8<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-5e6b98b8-2a10-4670-b219-91be3a50214e<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">visitor_id304141</td><td style="vertical-align:top;">:</td><td><div>9654573<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">visitor_id304141-hash</td><td style="vertical-align:top;">:</td><td><div>a17639d378dc76a718387c8a3de671d82c22792eb479788ac1df25cb25518f8283c15481a946529e618b3f2e71dce53930a0f713<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>__atuvc=134%7C21; visitor_id304141=9654573; visitor_id304141-hash=a17639d378dc76a718387c8a3de671d82c22792eb479788ac1df25cb25518f8283c15481a946529e618b3f2e71dce53930a0f713; __distillery=353e0a8_929144ac-1df5-44ad-80fc-5f09483261cf-f9b3b709c-dfac8bfab374-b99c; session_id_welcome=127.0.0.1-5e6b98b8-2a10-4670-b219-91be3a50214e; session_id_admin=127.0.0.1-731373d4-3bfd-4c8a-a9a4-facf6260038e; session_id_cruisership=127.0.0.1-21f3d20e-b5ae-4cd1-8368-8c4cac0fd4c8; __atuvs=59245d13f26f18fb006</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/Cruisership/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/Cruisership/default/search</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div>Gender=F&amp;Class=Second&amp;Port=Q</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>49286</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>diablo-CASPER-NIRVANA-NOTEBOOK</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/diablo/Desktop/web2py/applications/welcome/&#x27;, &#x27;/home/diablo/Desktop/web2py/applications/admin/&#x27;, &#x27;/home/diablo/Desktop/web2py/applications/Cruisership/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7f3ee26fd098: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;diablo-CASPER-NIRVANA-NOTEBOOK&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/diablo/Desktop/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>__atuvc=134%7C21; visitor_id304141=9654573; visitor_id304141-hash=a17639d378dc76a718387c8a3de671d82c22792eb479788ac1df25cb25518f8283c15481a946529e618b3f2e71dce53930a0f713; __distillery=353e0a8_929144ac-1df5-44ad-80fc-5f09483261cf-f9b3b709c-dfac8bfab374-b99c; session_id_welcome=127.0.0.1-5e6b98b8-2a10-4670-b219-91be3a50214e; session_id_admin=127.0.0.1-731373d4-3bfd-4c8a-a9a4-facf6260038e; session_id_cruisership=127.0.0.1-21f3d20e-b5ae-4cd1-8368-8c4cac0fd4c8; __atuvs=59245d13f26f18fb006</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/Cruisership/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>diablo-CASPER-NIRVANA-NOTEBOOK</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/Cruisership/default/search</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div>Gender=F&amp;Class=Second&amp;Port=Q</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>49286</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/Cruisership/default/search?Gender=F&amp;Class=Second&amp;Port=Q</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>diablo-CASPER-NIRVANA-NOTEBOOK</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7f3ee69231e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7f3ee273c120&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7f3eae6e3ad0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7f3ee69231e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x7f3ee273c120&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7f3eae6e3ad0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py/applications/Cruisership/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>search</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/diablo/Desktop/web2py/applications/welcome/&#x27;, &#x27;/home/diablo/Desktop/web2py/applications/admin/&#x27;, &#x27;/home/diablo/Desktop/web2py/applications/Cruisership/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x7f3ee26fd098: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;diablo-CASPER-NIRVANA-NOTEBOOK&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/diablo/Desktop/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>diablo-CASPER-NIRVANA-NOTEBOOK</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2017, 5, 23, 19, 22, 48, 561388)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/Cruisership/default/search</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2017, 5, 23, 16, 22, 48, 561408)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f3eae3c4710&gt;</div></td></tr></table></div>'
+tRp62
+sS'frames'
+p63
+(lp64
+(dp65
+S'file'
+p66
+S'/home/diablo/Desktop/web2py/gluon/restricted.py'
+p67
+sS'dump'
+p68
+(dp69
+S'environment'
+p70
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p71
+sS'ccode'
+p72
+S'<code object <module> at 0x7f3eadfd3930, file "/...s/Cruisership/views/default/search.html", line 1>'
+p73
+ssS'lnum'
+p74
+I227
+sS'lines'
+p75
+(dp76
+I224
+S'            ccode = code'
+p77
+sI225
+S'        else:'
+p78
+sI226
+S'            ccode = compile2(code, layer)'
+p79
+sI227
+S'        exec ccode in environment'
+p80
+sI228
+S'    except HTTP:'
+p81
+sI229
+S'        raise'
+p82
+sI230
+S'    except RestrictedError:'
+p83
+sI231
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+sI222
+S'    try:'
+p85
+sI223
+S'        if isinstance(code, types.CodeType):'
+p86
+ssS'call'
+p87
+S'(code=r"response.write(\'<!DOCTYPE html>\\n<!--[if lt IE 7... 2017 12:21:40 GMT -->\\n</html>\\n\', escape=False)", environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=\'/home/diablo/Desktop/web2py/applications/Cruisership/views/default/search.html\')'
+p88
+sS'func'
+p89
+S'restricted'
+p90
+sa(dp91
+g66
+S'/home/diablo/Desktop/web2py/applications/Cruisership/views/default/search.html'
+p92
+sg68
+(dp93
+S'endif'
+p94
+S'undefined'
+p95
+ssg74
+I9
+sg75
+(dp96
+I1
+S'response.write(\'<!DOCTYPE html>\\n<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->\\n<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!DOCTYPE html>\\n<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->\\n<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->\\n<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->\\n<!--[if gt IE 8]><!-->\\n<html class="no-js" lang="en" xmlns=\', escape=False)'
+p97
+sI2
+S"response.write(URL('static','www.w3.org/1999/xhtml/index.html'))"
+p98
+sI3
+S"response.write('>\\n<!--<![endif]-->\\n', escape=False)"
+p99
+sI4
+S'import json'
+p100
+sI5
+S"cnx = pymysql.connect(host='localhost',user='root',password='hades2525',db='mydb',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)"
+p101
+sI6
+S'cursor = cnx.cursor()'
+p102
+sI7
+S'query = ("select * from passenger WHERE passenger_gender = a " )'
+p103
+sI8
+S'#query = ("select * from passenger WHERE =%s " % (request.vars.Gender(cast=str)) )'
+p104
+sI9
+S'cur = cursor.execute(query)'
+p105
+sI10
+S"response.write('\\n', escape=False)"
+p106
+sI11
+S'response.write(request.vars)'
+p107
+sI12
+S'response.write(\'\\n\\n<!-- Mirrored from cruiseweb.com/ by HTTrack Website Copier/3.x [XR&CO\\\'2014], Mon, 08 May 2017 12:21:25 GMT -->\\n<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->\\n<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /><link rel="shortcut icon" href="faviconc619.ico?v=1.0" type="image/x-icon" /><link rel="stylesheet" href=\', escape=False)'
+p108
+sI13
+S"response.write(URL('static','css/bootstrap.min.css'))"
+p109
+sI14
+S'response.write(\' /><link rel="stylesheet" href=\', escape=False)'
+p110
+sI15
+S"response.write(URL('static','css/bootstrap-responsive.min.css'))"
+p111
+sI16
+S'response.write(\' /><link rel="stylesheet" href=\', escape=False)'
+p112
+sI17
+S"response.write(URL('static','css/bootstrap-modal.css'))"
+p113
+sI18
+S'response.write(\' /><link rel="stylesheet" href=\', escape=False)'
+p114
+sI19
+S"response.write(URL('static','css/bootstrap-select.min.css'))"
+p115
+ssg87
+S'()'
+p116
+sg89
+S'<module>'
+p117
+sa(dp118
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/cursors.py'
+p119
+sg68
+(dp120
+S'query'
+p121
+S"'select * from passenger WHERE passenger_gender = a '"
+p122
+sS'self'
+p123
+S'<pymysql.cursors.DictCursor object>'
+p124
+sS'result'
+p125
+g95
+sS'self._query'
+p126
+S'<bound method DictCursor._query of <pymysql.cursors.DictCursor object>>'
+p127
+ssg74
+I166
+sg75
+(dp128
+I161
+S'        while self.nextset():'
+p129
+sI162
+S'            pass'
+p130
+sI163
+S''
+sI164
+S'        query = self.mogrify(query, args)'
+p131
+sI165
+S''
+sI166
+S'        result = self._query(query)'
+p132
+sI167
+S'        self._executed = query'
+p133
+sI168
+S'        return result'
+p134
+sI169
+S''
+sI170
+S'    def executemany(self, query, args):'
+p135
+ssg87
+S"(self=<pymysql.cursors.DictCursor object>, query='select * from passenger WHERE passenger_gender = a ', args=None)"
+p136
+sg89
+S'execute'
+p137
+sa(dp138
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/cursors.py'
+p139
+sg68
+(dp140
+S'q'
+S"'select * from passenger WHERE passenger_gender = a '"
+p141
+sS'conn.query'
+p142
+S'<bound method Connection.query of <pymysql.connections.Connection object>>'
+p143
+sS'conn'
+p144
+S'<pymysql.connections.Connection object>'
+p145
+ssg74
+I322
+sg75
+(dp146
+I320
+S'        conn = self._get_db()'
+p147
+sI321
+S'        self._last_executed = q'
+p148
+sI322
+S'        conn.query(q)'
+p149
+sI323
+S'        self._do_get_result()'
+p150
+sI324
+S'        return self.rowcount'
+p151
+sI325
+S''
+sI326
+S'    def _do_get_result(self):'
+p152
+sI317
+S'        self.rownumber = r'
+p153
+sI318
+S''
+sI319
+S'    def _query(self, q):'
+p154
+ssg87
+S"(self=<pymysql.cursors.DictCursor object>, q='select * from passenger WHERE passenger_gender = a ')"
+p155
+sg89
+S'_query'
+p156
+sa(dp157
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/connections.py'
+p158
+sg68
+(dp159
+S'self._read_query_result'
+p160
+S'<bound method Connection._read_query_result of <pymysql.connections.Connection object>>'
+p161
+sS'self'
+p162
+S'<pymysql.connections.Connection object>'
+p163
+sS'unbuffered'
+p164
+S'False'
+p165
+sS'self._affected_rows'
+p166
+S'0'
+ssg74
+I856
+sg75
+(dp167
+I851
+S'            if PY2:'
+p168
+sI852
+S'                sql = sql.encode(self.encoding)'
+p169
+sI853
+S'            else:'
+p170
+sI854
+S"                sql = sql.encode(self.encoding, 'surrogateescape')"
+p171
+sI855
+S'        self._execute_command(COMMAND.COM_QUERY, sql)'
+p172
+sI856
+S'        self._affected_rows = self._read_query_result(unbuffered=unbuffered)'
+p173
+sI857
+S'        return self._affected_rows'
+p174
+sI858
+S''
+sI859
+S'    def next_result(self, unbuffered=False):'
+p175
+sI860
+S'        self._affected_rows = self._read_query_result(unbuffered=unbuffered)'
+p176
+ssg87
+S"(self=<pymysql.connections.Connection object>, sql='select * from passenger WHERE passenger_gender = a ', unbuffered=False)"
+p177
+sg89
+S'query'
+p178
+sa(dp179
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/connections.py'
+p180
+sg68
+(dp181
+S'result.read'
+p182
+S'<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>'
+p183
+sS'result'
+p184
+S'<pymysql.connections.MySQLResult object>'
+p185
+ssg74
+I1057
+sg75
+(dp186
+I1056
+S'            result = MySQLResult(self)'
+p187
+sI1057
+S'            result.read()'
+p188
+sI1058
+S'        self._result = result'
+p189
+sI1059
+S'        if result.server_status is not None:'
+p190
+sI1060
+S'            self.server_status = result.server_status'
+p191
+sI1061
+S'        return result.affected_rows'
+p192
+sI1052
+S'                result.unbuffered_active = False'
+p193
+sI1053
+S'                result.connection = None'
+p194
+sI1054
+S'                raise'
+p195
+sI1055
+S'        else:'
+p196
+ssg87
+S'(self=<pymysql.connections.Connection object>, unbuffered=False)'
+p197
+sg89
+S'_read_query_result'
+p198
+sa(dp199
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/connections.py'
+p200
+sg68
+(dp201
+S'first_packet'
+p202
+g95
+sS'self'
+p203
+S'<pymysql.connections.MySQLResult object>'
+p204
+sS'self.connection'
+p205
+S'None'
+p206
+sS'self.connection._read_packet'
+p207
+g95
+ssg74
+I1340
+sg75
+(dp208
+I1344
+S'            elif first_packet.is_load_local_packet():'
+p209
+sI1335
+S'        if self.unbuffered_active:'
+p210
+sI1336
+S'            self._finish_unbuffered_query()'
+p211
+sI1337
+S''
+sI1338
+S'    def read(self):'
+p212
+sI1339
+S'        try:'
+p213
+sI1340
+S'            first_packet = self.connection._read_packet()'
+p214
+sI1341
+S''
+sI1342
+S'            if first_packet.is_ok_packet():'
+p215
+sI1343
+S'                self._read_ok_packet(first_packet)'
+p216
+ssg87
+S'(self=<pymysql.connections.MySQLResult object>)'
+p217
+sg89
+S'read'
+p218
+sa(dp219
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/connections.py'
+p220
+sg68
+(dp221
+S'packet'
+p222
+S'<pymysql.connections.MysqlPacket object>'
+p223
+sS'packet.check_error'
+p224
+S'<bound method MysqlPacket.check_error of <pymysql.connections.MysqlPacket object>>'
+p225
+ssg74
+I1014
+sg75
+(dp226
+I1009
+S'                continue'
+p227
+sI1010
+S'            if bytes_to_read < MAX_PACKET_LEN:'
+p228
+sI1011
+S'                break'
+p229
+sI1012
+S''
+sI1013
+S'        packet = packet_type(buff, self.encoding)'
+p230
+sI1014
+S'        packet.check_error()'
+p231
+sI1015
+S'        return packet'
+p232
+sI1016
+S''
+sI1017
+S'    def _read_bytes(self, num_bytes):'
+p233
+sI1018
+S'        self._sock.settimeout(self._read_timeout)'
+p234
+ssg87
+S"(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.connections.MysqlPacket'>)"
+p235
+sg89
+S'_read_packet'
+p236
+sa(dp237
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/connections.py'
+p238
+sg68
+(dp239
+S'self._data'
+p240
+S'"\\xff\\x1e\\x04#42S22Unknown column \'a\' in \'where clause\'"'
+p241
+sS'self'
+p242
+S'<pymysql.connections.MysqlPacket object>'
+p243
+sS'global err'
+p244
+S"<module 'pymysql.err' from '/usr/local/lib/python2.7/dist-packages/pymysql/err.pyc'>"
+p245
+sS'err.raise_mysql_exception'
+p246
+S'<function raise_mysql_exception>'
+p247
+ssg74
+I393
+sg75
+(dp248
+I388
+S'        if self.is_error_packet():'
+p249
+sI389
+S'            self.rewind()'
+p250
+sI390
+S'            self.advance(1)  # field_count == error (we already know that)'
+p251
+sI391
+S'            errno = self.read_uint16()'
+p252
+sI392
+S'            if DEBUG: print("errno =", errno)'
+p253
+sI393
+S'            err.raise_mysql_exception(self._data)'
+p254
+sI394
+S''
+sI395
+S'    def dump(self):'
+p255
+sI396
+S'        dump_packet(self._data)'
+p256
+sI397
+S''
+ssg87
+S'(self=<pymysql.connections.MysqlPacket object>)'
+p257
+sg89
+S'check_error'
+p258
+sa(dp259
+g66
+S'/usr/local/lib/python2.7/dist-packages/pymysql/err.py'
+p260
+sg68
+(dp261
+S'errorclass'
+p262
+S"<class 'pymysql.err.InternalError'>"
+p263
+sS'errno'
+p264
+S'1054'
+p265
+sS'errval'
+p266
+S'u"Unknown column \'a\' in \'where clause\'"'
+p267
+ssg74
+I107
+sg75
+(dp268
+I98
+S'def raise_mysql_exception(data):'
+p269
+sI99
+S"    errno = struct.unpack('<h', data[1:3])[0]"
+p270
+sI100
+S'    is_41 = data[3:4] == b"#"'
+p271
+sI101
+S'    if is_41:'
+p272
+sI102
+S'        # client protocol 4.1'
+p273
+sI103
+S"        errval = data[9:].decode('utf-8', 'replace')"
+p274
+sI104
+S'    else:'
+p275
+sI105
+S"        errval = data[3:].decode('utf-8', 'replace')"
+p276
+sI106
+S'    errorclass = error_map.get(errno, InternalError)'
+p277
+sI107
+S'    raise errorclass(errno, errval)'
+p278
+ssg87
+S'(data="\\xff\\x1e\\x04#42S22Unknown column \'a\' in \'where clause\'")'
+p279
+sg89
+S'raise_mysql_exception'
+p280
+sasS'pyver'
+p281
+S'Python 2.7.12: /usr/bin/python (prefix: /usr)'
+p282
+sS'session'
+p283
+g61
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp284
+sS'etype'
+p285
+S"<class 'pymysql.err.InternalError'>"
+p286
+sS'date'
+p287
+S'Tue May 23 19:22:48 2017'
+p288
+sS'response'
+p289
+g61
+(S's|>\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f3eae84d768&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_cruisership</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-462148fe-834a-463d-8aee-efee67bbee98<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>Hello World</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="navbar-brand" href="http://www.web2py.com/" id="web2py-logo"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/Cruisership/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/Cruisership</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Controller</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/controllers/default.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>View</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/views/default/search.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>DB Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Menu Model</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Layout</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Stylesheet</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/Cruisership/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/Cruisership/appadmin/index</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Errors</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors/Cruisership</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>About</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about/Cruisership</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Download</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Support</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Quick Examples</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>FAQ</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Videos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Free Applications</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Online book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Preface</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/00</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Introduction</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/01</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Python</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/02</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Overview</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/03</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Core</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/04</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Views</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/05</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Database</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/06</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Forms and Validators</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/07</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Email and SMS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/08</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Access Control</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/09</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Services</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/10</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Ajax Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/11</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Components and Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/12</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Deployment Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/13</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Other Recipes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/14</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Helping web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/15</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Buy web2py\'s book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://stores.lulu.com/web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Groups</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/usergroups</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Twitter</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://twitter.com/web2py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Live Chat</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://webchat.freenode.net/?channels=web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/search/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_cruisership</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/diablo/Desktop/web2py/applications/Cruisership/sessions/127.0.0.1-462148fe-834a-463d-8aee-efee67bbee98</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>c0762cbf4baf7f9af97c051e7fcb8083</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-462148fe-834a-463d-8aee-efee67bbee98</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_cruisership</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>Cruisership</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Cruisership</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/search.html</div></td></tr></table></div>'
+tRp290
+sS'locals'
+p291
+(dp292
+S'errorclass'
+p293
+S"<class 'pymysql.err.InternalError'>"
+p294
+sS'data'
+p295
+S'"\\xff\\x1e\\x04#42S22Unknown column \'a\' in \'where clause\'"'
+p296
+sS'is_41'
+p297
+S'True'
+p298
+sS'errval'
+p299
+S'u"Unknown column \'a\' in \'where clause\'"'
+p300
+sS'errno'
+p301
+S'1054'
+p302
+sssS'traceback'
+p303
+S'Traceback (most recent call last):\n  File "/home/diablo/Desktop/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/diablo/Desktop/web2py/applications/Cruisership/views/default/search.html", line 9, in <module>\n    <!--<![endif]-->\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/cursors.py", line 166, in execute\n    result = self._query(query)\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/cursors.py", line 322, in _query\n    conn.query(q)\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/connections.py", line 856, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/connections.py", line 1057, in _read_query_result\n    result.read()\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/connections.py", line 1340, in read\n    first_packet = self.connection._read_packet()\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/connections.py", line 1014, in _read_packet\n    packet.check_error()\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/connections.py", line 393, in check_error\n    err.raise_mysql_exception(self._data)\n  File "/usr/local/lib/python2.7/dist-packages/pymysql/err.py", line 107, in raise_mysql_exception\n    raise errorclass(errno, errval)\nInternalError: (1054, u"Unknown column \'a\' in \'where clause\'")\n'
+p304
+s.

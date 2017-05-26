@@ -17,9 +17,19 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
+    form = FORM(INPUT(_name='name',_lastname ='lastname', requires=IS_NOT_EMPTY()),
+        INPUT(_type='submit'), _action=URL('search'))
+    #posts = (db.passenger).select()
+
     response.flash = T("Hello World")
-    return response.render()
+    return locals()
+def database():
+    #posts = db(db.passenger).select()
+    response.flash = T("Hello World")
+    return locals()
 def search():
+
+
     """
     example action using the internationalization operator T and flash
     rendered by views/default/index.html or views/generic.html

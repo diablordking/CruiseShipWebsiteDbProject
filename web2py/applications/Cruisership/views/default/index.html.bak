@@ -3,12 +3,30 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" xmlns={{URL('static','www.w3.org/1999/xhtml/index.html')}}>
+<html class="no-js" lang="en" xmlns={{=URL('static','www.w3.org/1999/xhtml/index.html')}}>
 <!--<![endif]-->
+{{
+
+import json
+
+cnx = pymysql.connect(host='localhost',user='root',password='hades2525',db='mydb',charset='utf8mb4')
+
+
+cursor = cnx.cursor()
+query = ("SELECT * FROM passenger")
+
+
+cur = cursor.execute(query)
+
+a = cursor.fetchall()
+
+print(cur)
+
+}}
 
 <!-- Mirrored from cruiseweb.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 May 2017 12:21:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /><link rel="shortcut icon" href="faviconc619.ico?v=1.0" type="image/x-icon" /><link rel="stylesheet" href={{ URL('static','css/bootstrap.min.css') }} /><link rel="stylesheet" href={{ URL('static','css/bootstrap-responsive.min.css') }} /><link rel="stylesheet" href={{ URL('static','css/bootstrap-modal.css') }} /><link rel="stylesheet" href={{ URL('static','css/bootstrap-select.min.css') }} /><link rel="stylesheet" href="http://cruiseweb.com/css/pretty-checkable.css" /><link rel="stylesheet" href="http://cruiseweb.com/css/flexslider.css" /><link rel="stylesheet" href="http://cruiseweb.com/css/bootstrap-multiselect.css" type="text/css" /><link rel="stylesheet" href="http://cruiseweb.com/css/main.css" />
+<head id="Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /><link rel="shortcut icon" href="faviconc619.ico?v=1.0" type="image/x-icon" /><link rel="stylesheet" href={{ =URL('static','css/bootstrap.min.css') }} /><link rel="stylesheet" href={{ =URL('static','css/bootstrap-responsive.min.css') }} /><link rel="stylesheet" href={{ =URL('static','css/bootstrap-modal.css') }} /><link rel="stylesheet" href={{ =URL('static','css/bootstrap-select.min.css') }} /><link rel="stylesheet" href="http://cruiseweb.com/css/pretty-checkable.css" /><link rel="stylesheet" href="http://cruiseweb.com/css/flexslider.css" /><link rel="stylesheet" href="http://cruiseweb.com/css/bootstrap-multiselect.css" type="text/css" /><link rel="stylesheet" href="http://cruiseweb.com/css/main.css" />
     <!-- Typekit -->
     <script type="text/javascript" src="http://cruiseweb.com/js/vendor/fvx8xua.js"></script><script type="text/javascript">try { Typekit.load(); } catch (e) { }</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <script src="http://cruiseweb.com/js/vendor/jquery-migrate-1.2.1.min.js"></script>
 	  <!-- Eloqua Tracking Script12 for personalquote,modal-emaildeal,modal-checkavailibilty.aspx-->
@@ -406,118 +424,116 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', [],
  </script>
 
             <!-- Map -->
-            <section id="map-tabs">
-                <div class="container">
-                    <div class="map-title">A World of Choices</div>
-                    <div align="center" class="tab-group">
-                        <div class="tab-destinations"><a href="#" id="map-dest" alt="Cruise Destinations" title="Cruise Destinations"></a></div>
-                        <div class="tab-ports"><a href="#" id="map-port" alt="Departure Ports" title="Departure Ports"></a></div>
-                    </div>
-                </div>
-            </section>
-            <section id="world-map">
-                <div class="container">
-                    <div id="world-destinations">
-                        <h2 class="white">Cruise Destinations</h2>
-                        <ul>
-                            <li class="pin pin-africa">
-                                <a id="hlnkAfrica" title="Africa" href="http://cruiseweb.com/destinations/cruise-africa"><i class="icon-map-marker icon-white"></i>Africa </a></li>
-                            <li class="pin pin-alaska">
-                                <a id="hlnkAlaska" title="Alaska" href="http://cruiseweb.com/destinations/cruise-alaska"><i class="icon-map-marker icon-white"></i>Alaska</a></li>
-                            <li class="pin pin-antarctica">
-                                <a id="hlnkAntarctica" title="Antarctica" href="http://cruiseweb.com/destinations/cruise-antarctica"><i class="icon-map-marker icon-white"></i>Antarctica</a></li>
-                            <li class="pin pin-asia">
-                                <a id="hlnkAsia" title="Asia" href="http://cruiseweb.com/destinations/cruise-asia"><i class="icon-map-marker icon-white"></i>Asia</a></li>
-                            <li class="pin pin-australia">
-                                <a id="hlnkAustralia" title="Australia &amp; New Zealand" href="http://cruiseweb.com/destinations/cruise-australia-new-zealand"><i class="icon-map-marker icon-white"></i>Australia &amp; New Zealand</a></li>
-                            <li class="pin pin-bahamas">
-                                <a id="hlnkBahamas" title="Bahamas" href="http://cruiseweb.com/destinations/cruise-bahamas"><i class="icon-map-marker icon-white"></i>Bahamas</a></li>
-                            <li class="pin pin-bermuda">
-                                <a id="hlnkBermuda" title="Bermuda" href="http://cruiseweb.com/destinations/cruise-bermuda"><i class="icon-map-marker icon-white"></i>Bermuda</a></li>
-                            <li class="pin pin-canada">
-                                <a id="hlnkCanada" title="Canada &amp; New England" href="http://cruiseweb.com/destinations/cruise-canada-new-england"><i class="icon-map-marker icon-white"></i>Canada &amp; New England</a></li>
-                            <li class="pin pin-caribbean">
-                                <a id="hlnkCaribbean" title="Caribbean" href="http://cruiseweb.com/destinations/cruise-caribbean"><i class="icon-map-marker icon-white"></i>Caribbean</a></li>
-                            <li class="pin pin-hawaii">
-                                <a id="hlnkHawaii" title="Hawaii" href="http://cruiseweb.com/destinations/cruise-hawaii"><i class="icon-map-marker icon-white"></i>Hawaii</a></li>
-                            <li class="pin pin-medit">
-                                <a id="hlnkMediterranean" title="Mediterranean" href="http://cruiseweb.com/destinations/cruise-mediterranean"><i class="icon-map-marker icon-white"></i>Mediterranean</a></li>
-                            <li class="pin pin-mexico">
-                                <a id="hlnkMexican" title="Mexican Riviera" href="http://cruiseweb.com/destinations/cruise-mexican-riviera"><i class="icon-map-marker icon-white"></i>Mexican Riviera</a></li>
-                            <li class="pin pin-europe">
-                                <a id="hlnkNorthern" title="Northern Europe" href="http://cruiseweb.com/destinations/cruise-northern-europe"><i class="icon-map-marker icon-white"></i>Northern Europe</a></li>
-                            <li class="pin pin-panama">
-                                <a id="hlnkPanama" title="Panama Canal" href="http://cruiseweb.com/destinations/cruise-panama-canal"><i class="icon-map-marker icon-white"></i>Panama Canal</a></li>
-                            <li class="pin pin-southamerica">
-                                <a id="hlnkSouthAmerica" title="South America" href="http://cruiseweb.com/destinations/cruise-south-america"><i class="icon-map-marker icon-white"></i>South America</a></li>
-                            <li class="pin pin-tahiti">
-                                <a id="hlnkSouthPacific" title="South Pacific &amp; Tahiti" href="http://cruiseweb.com/destinations/cruise-south-pacific-tahiti"><i class="icon-map-marker icon-white"></i>South Pacific &amp; Tahiti</a></li>
-                            <li class="pin pin-transatlantic">
-                                <a id="hlnkTransatlantic" title="Transatlantic" href="http://cruiseweb.com/destinations/cruise-transatlantic"><i class="icon-map-marker icon-white"></i>Transatlantic</a></li>
-                            <li class="pin pin-world">
-                                <a id="hlnkWorldCruise" title="World Cruises" href="http://cruiseweb.com/destinations/cruise-world"><i class="icon-map-marker icon-white"></i>World Cruises</a></li>
-                            <li class="pin pin-river">
-                                <a id="hlnkRiver" title="River Cruises" href="http://cruiseweb.com/river-cruises/"><i class="icon-map-marker icon-white"></i>River Cruises</a></li>
-                        </ul>
-                    </div>
-                    <div id="world-ports">
-                        <h2 class="white">Departure Ports</h2>
-                        <ul>
-                            <li class="pin pin-africa"><a href="#" alt="Africa" title="Africa" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Africa');"><i class="icon-map-marker icon-white"></i>Africa</a></li>
-                            <li class="pin pin-asia"><a href="#" alt="Asia &amp; the Pacific" title="Asia &amp; the Pacific" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Asia');"><i class="icon-map-marker icon-white"></i>Asia &amp; the Pacific</a></li>
-                            <li class="pin pin-australia"><a href="#" alt="Australia &amp; New Zealand" title="Australia &amp; New Zealand" data-target='/modal-departureports.aspx' onclick="SendValueToSessionDestination('Australia %26 New Zealand');" data-toggle="modal"><i class="icon-map-marker icon-white"></i>Australia &amp; New Zealand</a></li>
-                            <li class="pin pin-caribbean"><a href="#" alt="Caribbean &amp; Central America" title="Caribbean &amp; Central America" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Caribbean %26 Central America');"><i class="icon-map-marker icon-white"></i>Caribbean &amp; Central America</a></li>
-                            <li class="pin pin-hawaii"><a href="#" alt="Hawaii" title="Hawaii" data-target='/modal-departureports.aspx' onclick="SendValueToSessionDestination('Hawaii');" data-toggle="modal"><i class="icon-map-marker icon-white"></i>Hawaii</a></li>
-                            <li class="pin pin-medit"><a href="#" alt="Mediterranean" title="Mediterranean" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Mediterranean');"><i class="icon-map-marker icon-white"></i>Mediterranean</a></li>
-                            <li class="pin pin-middleeast"><a href="#" alt="Middle East" title="Middle East" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Middle East');"><i class="icon-map-marker icon-white"></i>Middle East</a></li>
-                            <li class="pin pin-northamerica"><a href="#" alt="North America" title="North America" data-target='/modal-departureports.aspx' onclick="SendValueToSessionDestination('North America');" data-toggle="modal"><i class="icon-map-marker icon-white"></i>North America</a></li>
-                            <li class="pin pin-europe"><a href="#" alt="Northern Europe" title="Northern Europe" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('Northern Europe');"><i class="icon-map-marker icon-white"></i>Northern Europe</a></li>
-                            <li class="pin pin-southamerica"><a href="#" alt="South America" title="South America" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('South America');"><i class="icon-map-marker icon-white"></i>South America</a></li>
-                            <li class="pin pin-tahiti"><a href="#" alt="South Pacific &amp; Tahiti" title="South Pacific &amp; Tahiti" data-target='/modal-departureports.aspx' data-toggle="modal" onclick="SendValueToSessionDestination('South Pacific %26 Tahiti');"><i class="icon-map-marker icon-white"></i>South Pacific &amp; Tahiti</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+
+  
             <!-- 3-item spotlight -->
             <!-- Content -->
             <section class="container main-content arrow-box-up">
-                <div class="row-fluid">
-                    <div align="center" class="inline-lg-title">
-                        Every Type of Cruise.<br class="visible-phone" />
-                        Every Type of Vacation.
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="span4 feat">
-                        <a href='http://cruiseweb.com/popular-cruise-lines/'>
-                            <img src='http://cruiseweb.com/img/popular-cruises-grid.jpg'
-                                 alt="View Popular Cruises" title="View Popular Cruises" />
-                            <div class="feat-description">
-                                <h3>Popular Cruises</h3>
+             <div class="row-fluid  ng-scope" ng-repeat="search in searchResults track by search.ItineraryId" after-last-item="afterlastItem">
+                        <div class="row-fluid">
+                            <!-- First column pic ng-if="search.DealDateHTML!=''"-->
+                            <div class="span4 photo">
+                                <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america">
+                                    <img class="lazy" ng-src="http://cruiseweb.com/admin/images/ships/image172.jpg" title="Pride of America" alt="Pride of America" src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/image172.jpg"></a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="span4 feat">
-                        <a href='http://cruiseweb.com/luxury-cruise-lines/'>
-                            <img 
-                                src='http://cruiseweb.com/img/luxury-cruises-grid.jpg' 
-                                alt="View Luxury Cruises" title="View Luxury Cruises" />
-                            <div class="feat-description">
-                                <h3>Luxury Cruises</h3>
+                            <!-- Second column details and dates -->
+                            <div class="span6 details">
+                                <div class="logo" align="center">
+                                    <div class="center-logo">
+                                        <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line">
+                                            <img ng-src="http://cruiseweb.com/admin/images/vendor/image5logo.jpg" id="imgLogo" class="logoposition" tooltip="Norwegian Cruise Line" alternatetext="Norwegian Cruise Line" src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/image5logo.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <h3 class="color-blue"><a id="lnkItinerary1" ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii"><strong><span id="lblItineraryName" ng-bind="search.Planname" class="ng-binding">7 NIGHT HAWAII CRUISE</span></strong></a></h3>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="icon"><i class="icon-globe"></i></div>
+                                <div class="ship">
+                                    <p class="small-text">
+                                        <strong>Ship</strong>: 
+                                            <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america" tooltip="Pride of America" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america">
+                                                <span ng-bind="search.ShipName" class="ng-binding">Pride of America</span>
+                                            </a>
+                                    </p>
+                                </div>
+                                <div class="icon"><i class="icon-flag"></i></div>
+                                <div class="ship">
+                                    <p class="small-text">
+                                        <strong>Departing from</strong>: 
+                               <a ng-href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii" href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii"><span ng-bind="search.DepartingFrom" tooltip="Honolulu, Oahu, Hawaii" class="ng-binding">Honolulu, Oahu, Hawaii</span></a>
+                                    </p>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="icon"><i class="icon-map-marker"></i></div>
+                                <div class="places">
+                                    <p class="small-text">
+                                        <strong>Ports of call</strong>: 
+                               <span ng-bind-html="search.PortOfCall | sanitize" class="ng-binding"><a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii">Honolulu, Oahu, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-kahului-maui-hawaii">Kahului, Maui, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-hilo-hawaii">Hilo, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-kona-hawaii">Kona, Hawaii</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-nawiliwili-kauai">Nawiliwili, Kauai</a>;<a style="margin-left:8px;" href="http://cruiseweb.com/ports/departs-honolulu-oahu-hawaii">Honolulu, Oahu, Hawaii</a>;</span>
+                                    </p>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <!-- Slider buttons -->
+
+
+                                <div class="clearfix"></div>
+                                <div>
+                                    <deal-tagline para="search" ng-bind-html="search.DealTagLine | sanitize" class="ng-binding ng-isolate-scope"><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Cruise+Line%3a+Choose+Your+FREE+Perks*" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Cruise Line: Choose Your FREE Perks*</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Hawaii+Deal%3a+Choose+Your+FREE+Offer*" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Hawaii Deal: Choose Your FREE Offer*</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Cruise+Line%3a+up+to+%2450+Onboard+Credit*" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Cruise Line: up to $50 Onboard Credit*</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Go+Freestyle+with+Norwegian+Cruise+Line" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Go Freestyle with Norwegian Cruise Line</a></div><div class="special"><a href="#" onclick="OpenDealTag(this);" data-target="http://cruiseweb.com/modal-genericdeals.aspx?name=Norwegian+Hawaii+Cruisetour+Packages" data-toggle="modal" class="btn btn-seafoam btn-block modal-iframe">Norwegian Hawaii Cruisetour Packages</a></div></deal-tagline>
+                                </div>
+                                <div class="clearfix"></div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="span4 feat">
-                        <a href='http://cruiseweb.com/river-cruise-lines/'>
-                            <img class="lazy" 
-                                src='http://cruiseweb.com/img/river-cruises-grid.jpg' 
-                                alt="View River Cruises" title="View River Cruises" />
-                            <div class="feat-description">
-                                <h3>River Cruises</h3>
+                            <!-- Third column price -->
+                            <div class="span2 price">
+                                <div class="favoriteI" align="center">
+                                    <mark-favorite para="search" data-path="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" data-currentuserstatus="false" class="ng-isolate-scope"><a href="#" data-toggle="tooltip" rel="tooltip" title="" data-original-title="Mark Favorite" class="ng-scope"><span class="imark-fave"><img src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/icon-heart-empty.png">Mark as Favorite</span></a></mark-favorite>
+                                </div>
+                                <div id="cphlUser_PriceDiv" class="ribbon">
+                                    <a href="#">
+                                        <img ng-src="http://cruiseweb.com//img/ribbon-deal.png" alt="Deal" title="Deal" draggable="false" src="Cruise%20Search%20%7C%20The%20Cruise%20Web_files/ribbon-deal.png"></a>
+                                </div>
+
+                                <br>
+                                <p class="small-text color-ocean"><strong>Published prices from</strong></p>
+                                <div class="cost-digits">
+                                    <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii/2017-12-09#cruise-itinerary" ng-switch="" on="currentTabType" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii/2017-12-09#cruise-itinerary">
+                                        <!-- ngSwitchWhen: 1 --><!-- ngIf: search.insidePrice=='0.0000' --><!-- end ngSwitchWhen: -->
+                                        <!-- ngSwitchWhen: 1 --><!-- ngIf: search.insidePrice!='0.0000' --><span ng-switch-when="1" ng-bind="search.insidePrice | currency:'$':0" ng-if="search.insidePrice!='0.0000'" class="ng-binding ng-scope">$1,379</span><!-- end ngIf: search.insidePrice!='0.0000' --><!-- end ngSwitchWhen: -->
+                                        <!-- ngSwitchWhen: 2 -->
+                                        <!-- ngSwitchWhen: 2 -->
+                                        <!-- ngSwitchWhen: 3 -->
+                                        <!-- ngSwitchWhen: 3 -->
+                                        <!-- ngSwitchWhen: 4 -->
+                                        <!-- ngSwitchWhen: 4 -->
+                                    </a>
+                                </div>
+                                <p class="tiny-text" ng-switch="" on="currentTabType">
+                                    <!-- ngSwitchWhen: 1 --><span ng-switch-when="1" class="ng-scope">Based on Lowest prices</span><!-- end ngSwitchWhen: -->
+                                    <!-- ngSwitchWhen: 2 -->
+                                    <!-- ngSwitchWhen: 3 -->
+                                    <!-- ngSwitchWhen: 4 -->
+                                </p>
+
+                                <a ng-href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii" class="btn btn-orange btn-block" href="http://cruiseweb.com/cruise-lines/norwegian-cruise-line/ship-pride-of-america/7-night-hawaii-cruise-departs-honolulu-oahu-hawaii"><strong>Details</strong></a>
+
                             </div>
-                        </a>
-                    </div>
-                </div>
+                            <div class="clearfix"></div>
+
+                            <!-- Item page indicator -->
+                            <div class="qty-divider">
+                                <hr>
+                                <div class="number">
+                                    <h3><strong>
+                                        <span id="lblPageNumber" class="ng-binding">1</span>
+                                    </strong></h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div
+    
             </section>
         </div>
         <!-- Begin ginormous footer region -->
